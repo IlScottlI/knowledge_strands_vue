@@ -5,8 +5,10 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import VueMoment from "vue-moment";
 import moment from "moment";
-import VueSimplemde from 'vue-simplemde'
 import 'simplemde/dist/simplemde.min.css'
+import VueMarkdown from 'vue-markdown'
+import 'highlight.js/styles/default.css';
+import Highlight from 'vue-markdown-highlight'
 
 import {
   Providers,
@@ -53,7 +55,10 @@ async function checkMsal() {
     let account = await Providers.me();
     Vue.use({ moment });
     Vue.use(VueMoment);
-    Vue.component('vue-simplemde', VueSimplemde)
+
+    Vue.component('vue-markdown', VueMarkdown);
+    Vue.use(Highlight)
+
     new Vue({
       Providers,
       account,
@@ -61,6 +66,9 @@ async function checkMsal() {
       router,
       store,
       vuetify,
+      components: {
+        'vue-markdown': VueMarkdown
+      },
       render: h => h(App)
     }).$mount('#app')
   } else {

@@ -16,6 +16,8 @@ export default new Vuex.Store({
     learnProductsId: '9794a980-15c4-40e6-bef7-24658dcb3601',
     learnUnitsId: 'fead18ce-9622-4dd6-abb7-244e3f4648b4',
     learnTypesId: '21e68f59-26b9-46e3-8b83-0a04c99335e3',
+    learnChecksId: '9513338d-dca6-4c50-a3f2-ef85285b10dd',
+    sharePointLists: null,
     mgtShow: true,
     theme: null,
     now: null,
@@ -26,14 +28,20 @@ export default new Vuex.Store({
     learnModuleId: null,
     learnUnitId: null,
     learnItems: null,
+    learnUserProfile: null,
     learnUnitItems: null,
     learnProductItems: null,
     selectedProducts: null,
     learnRoleItems: null,
     selectedRoles: null,
     loading: false,
+    learnUnitIndex: null,
+    learnUnitItemsCount: null,
+    learnKnowledgeChecks: null,
+    learnKnowledgeCheckPass: false,
   },
   mutations: {
+    setSharePointLists: set('sharePointLists'),
     setMgtShow: set('mgtShow'),
     setTheme: set('theme'),
     setLoading: set('loading'),
@@ -45,11 +53,16 @@ export default new Vuex.Store({
     setLearnModuleId: set('learnModuleId'),
     setLearnUnitId: set('learnUnitId'),
     setLearnUnitItems: set('learnUnitItems'),
+    setLearnUserProfile: set('learnUserProfile'),
     setLearnItems: set('learnItems'),
     setLearnProductItems: set('learnProductItems'),
     setSelectedProducts: set('selectedProducts'),
     setLearnRoleItems: set('learnRoleItems'),
     setSelectedRoles: set('selectedRoles'),
+    setLearnUnitIndex: set('learnUnitIndex'),
+    setLearnUnitItemsCount: set('learnUnitItemsCount'),
+    setLearnKnowledgeChecks: set('learnKnowledgeChecks'),
+    setLearnKnowledgeCheckPassß: set('learnKnowledgeCheckPass'),
   },
   getters: {
     learnUnit: (state) => {
@@ -66,6 +79,14 @@ export default new Vuex.Store({
       if (!state.learnPathId) return;
       if (!state.learnItems) return;
       return state.learnItems.find(e => e.id === state.learnPathId);
+    },
+    learnKnowledgeCheck: (state, getters) => {
+      if (!getters.learnUnit) return;
+      if (!state.learnKnowledgeChecks) return;
+      if (!getters.learnUnit.knowledgeCheck) return;
+      let num = getters.learnUnit.knowledgeCheck;
+      let check = state.learnKnowledgeChecks.find(e => Number(e.id) === num);
+      return JSON.parse(check.JSON_Data);
     },
     learnPathModulesItems: (state, getters) => {
       if (!state.learnPathId) return;
@@ -91,9 +112,9 @@ export default new Vuex.Store({
       return items
     },
     learnModulesUnitItems: (state, getters) => {
-      if (!state.learnUnitItems) return;
-      if (!getters.learnModule) return;
-      if (!getters.learnModule.childern) return;
+      if (!state.learnUnitItems) return 0;
+      if (!getters.learnModule) return 0;
+      if (!getters.learnModule.childern) return 0;
       let moduleIds = getters.learnModule.childern.split(',');
       let items = [];
       moduleIds.forEach(item => {
@@ -148,6 +169,18 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    checkKnowledge: function ({ commit }) {
+      commit("setLoading", true);
+      setTimeout(() => {
+        commit("setLoading", false);
+      }, 2);
+    },
+    handleChange: function ({ commit }) {
+      commit("setLoading", true);
+      setTimeout(() => {
+        commit("setLoading", false);
+      }, 2);
+    },
     toggleTheme: function ({ commit }) {
       commit('setMgtShow', false);
       document.querySelector("#app").__vue__.$vuetify.theme.isDark = !document.querySelector("#app").__vue__.$vuetify.theme.isDark;
@@ -168,6 +201,8 @@ export default new Vuex.Store({
       res.then((res) => {
         if (Array.isArray(res.value)) {
           commit('setLearnUnitItems', res.value.map(e => { return e.fields }));
+        } else {
+          commit('setLearnUnitItems', null);
         }
       });
     },
@@ -184,6 +219,22 @@ export default new Vuex.Store({
       res.then((res) => {
         if (Array.isArray(res.value)) {
           commit('setLearnRoleItems', res.value.map(e => { return e.fields }));
+        }
+      });
+    },
+    getUserProfile: function ({ state, commit }) {
+      let res = functions.getSharePointListItems(state.baseSharePointId, state.accessToken, state.learnUsersId, 1, `&$filter=fields/user_email eq '${state.account.username}'`);
+      res.then((res) => {
+        if (Array.isArray(res.value)) {
+          commit('setLearnUserProfile', res.value.map(e => { return e.fields })[0]);
+        }
+      });
+    },
+    getLearnKnowledgeChecks: function ({ state, commit }) {
+      let res = functions.getSharePointListItems(state.baseSharePointId, state.accessToken, state.learnChecksId);
+      res.then((res) => {
+        if (Array.isArray(res.value)) {
+          commit('setLearnKnowledgeChecks', res.value.map(e => { return e.fields }));
         }
       });
     },

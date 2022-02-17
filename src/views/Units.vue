@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-breadcrumbs :items="breadcrumbs">
+    <v-breadcrumbs :items="breadcrumbs" v-if="breadcrumbs">
       <template v-slot:item="{ item }">
         <v-breadcrumbs-item :to="item.href" :disabled="item.disabled">
           {{ item.text }}
@@ -13,52 +13,117 @@
     >
       <v-container v-if="learnUnit" class="d-flex justify-center">
         <v-sheet width="900">
-          <v-toolbar extended height="8" v-if="learnModulesUnitItems">
+          <v-toolbar extended height="11" v-if="learnModulesUnitItems">
             <template v-slot:extension>
-              <v-fab-transition v-if="showPrevious">
-                <router-link
-                  :to="previousButton(learnModulesUnitItems)"
-                  style="text-decoration: none"
-                >
-                  <v-btn small left top text @click="handleChange">
-                    <v-icon>mdi-chevron-left</v-icon>
-                    Previous
-                  </v-btn>
-                </router-link>
+              <v-fab-transition>
+                <div style="width: 150px">
+                  <router-link
+                    v-if="showPrevious"
+                    :to="previousButton(learnModulesUnitItems)"
+                    style="text-decoration: none"
+                  >
+                    <v-btn small left top text @click="handleChange">
+                      <v-icon>mdi-chevron-left</v-icon>
+                      Previous
+                    </v-btn>
+                  </router-link>
+                </div>
               </v-fab-transition>
               <v-spacer></v-spacer>
               <unit-menu />
               <v-spacer></v-spacer>
 
-              <v-fab-transition v-if="showNext">
-                <router-link
-                  :to="nextButton(learnModulesUnitItems)"
-                  style="text-decoration: none"
-                >
-                  <v-btn small top right text @click="handleChange">
-                    Next
-                    <v-icon>mdi-chevron-right</v-icon>
-                  </v-btn>
-                </router-link>
+              <v-fab-transition>
+                <div style="width: 150px">
+                  <router-link
+                    v-if="showNext"
+                    :to="nextButton(learnModulesUnitItems)"
+                    style="text-decoration: none"
+                  >
+                    <v-btn small top right text @click="handleChange">
+                      Next
+                      <v-icon>mdi-chevron-right</v-icon>
+                    </v-btn>
+                  </router-link>
+                </div>
               </v-fab-transition>
             </template>
           </v-toolbar>
-          <v-row class="pa-10" justify="center">
+          <v-row class="pa-5" justify="center">
             <v-col cols="12" sm="2">
               <div v-html="learnUnit.icon" />
             </v-col>
-            <v-col cols="12" sm="10">
+            <v-col cols="12" sm="11">
               <div class="text-h3">{{ learnUnit.Title }}</div>
               <v-row>
                 <div v-html="learnUnit.details"></div>
               </v-row>
             </v-col>
-            <v-col cols="12" sm="8">
+            <v-col cols="12" sm="11">
               <small>{{
                 (learnUnit.durationInMinutes * 60000) | duration("humanize")
               }}</small>
             </v-col>
-            <v-col cols="12" sm="8" v-if="learnModulesUnitItems">
+            <v-col cols="12" sm="11">
+              <div v-html="learnUnit.HTML" v-if="learnUnit.HTML"></div>
+            </v-col>
+            <v-col cols="12" sm="11">
+              <div v-if="learnUnit.Markdown">
+                <vue-markdown v-highlight>{{
+                  learnUnit.Markdown
+                }}</vue-markdown>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="learnUnit.tip">
+              <v-alert
+                color="green darken-3"
+                dark
+                icon="mdi-lightbulb-outline"
+                border="left"
+                prominent
+              >
+                <div class="text-h6">Tip</div>
+                <div v-html="learnUnit.tip"></div>
+              </v-alert>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="learnUnit.note">
+              <v-alert
+                color="deep-purple darken-2"
+                icon="mdi-note-alert"
+                border="left"
+                prominent
+                dark
+              >
+                <div class="text-h6">Note</div>
+                <div v-html="learnUnit.note"></div>
+              </v-alert>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="learnKnowledgeCheck">
+              <div class="text-h4">Check your knowledge</div>
+              <div v-for="(value, key) in learnKnowledgeCheck" :key="key">
+                <knowledge-check
+                  v-if="learnUnit.knowledgeCheck"
+                  :check="value"
+                  :number="key + 1"
+                />
+              </div>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="learnKnowledgeCheck">
+              <div>
+                <v-btn color="primary" @click="checkKnowledge">
+                  Check your answers</v-btn
+                >
+              </div>
+            </v-col>
+            <v-col cols="12" sm="11">
+              <v-divider></v-divider>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="nextUnit(learnModulesUnitItems)">
+              <div class="text-h6">
+                Next unit: {{ nextUnit(learnModulesUnitItems).Title }}
+              </div>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="learnModulesUnitItems">
               <div v-if="nextButton(learnModulesUnitItems)">
                 <v-btn
                   color="primary"
@@ -77,16 +142,35 @@
 </template>
 
 <script>
-import unitMenu from "../components/UnitMenu.vue";
+import UnitMenu from "../components/UnitMenu.vue";
+import KnowledgeCheck from "../components/KnowledgeCheck.vue";
+import { mapActions } from "vuex";
+
 export default {
   components: {
-    unitMenu,
+    UnitMenu,
+    KnowledgeCheck,
   },
   data: () => ({
-    learnUnitIndex: null,
-    learnUnitItemsCount: null,
+    text: "# hello world",
   }),
   computed: {
+    learnUnitIndex: {
+      get() {
+        return this.$store.state.learnUnitIndex;
+      },
+      set(value) {
+        this.$store.commit("setLearnUnitIndex", value);
+      },
+    },
+    learnUnitItemsCount: {
+      get() {
+        return this.$store.state.learnUnitItemsCount;
+      },
+      set(value) {
+        this.$store.commit("setLearnUnitItemsCount", value);
+      },
+    },
     scrollbarTheme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
@@ -111,6 +195,9 @@ export default {
     learnUnit: function () {
       return this.$store.getters.learnUnit;
     },
+    learnKnowledgeCheck: function () {
+      return this.$store.getters.learnKnowledgeCheck;
+    },
     showNext: function () {
       if (!this.$store.getters.learnModulesUnitItems) return false;
       let nextIndex = this.learnUnitIndex + 1;
@@ -129,11 +216,12 @@ export default {
     },
   },
   methods: {
-    handleChange: function () {
-      this.$store.commit("setLoading", true);
-      setTimeout(() => {
-        this.$store.commit("setLoading", false);
-      }, 2);
+    ...mapActions(["handleChange", "checkKnowledge"]),
+    nextUnit: function (learnModulesUnitItems) {
+      let nextIndex = this.learnUnitIndex + 1;
+      return learnModulesUnitItems[nextIndex]
+        ? learnModulesUnitItems[nextIndex]
+        : {};
     },
     nextButton: function (learnModulesUnitItems) {
       let nextIndex = this.learnUnitIndex + 1;
@@ -149,38 +237,43 @@ export default {
         : "";
     },
     getCrumbs: function (duration, type, childern) {
-      let count = childern ? childern.split(",").length : "";
-      let subType = "";
-      switch (type) {
-        case "Module":
-          subType = "Unit";
-          break;
-        case "Learning Path":
-          subType = "Module";
-          break;
+      try {
+        if (!childern) return;
+        let count = childern ? childern.split(",").length : 0;
+        let subType = "";
+        switch (type) {
+          case "Module":
+            subType = "Unit";
+            break;
+          case "Learning Path":
+            subType = "Module";
+            break;
+        }
+        return [
+          {
+            text: this.$moment.duration(duration * 60000).humanize(),
+            disabled: true,
+            href: "",
+          },
+          {
+            text: type,
+            disabled: true,
+            href: "",
+          },
+          {
+            text: count + (count > 1 ? " " + subType + "s" : subType),
+            disabled: true,
+            href: "",
+          },
+        ];
+      } catch {
+        return null;
       }
-      return [
-        {
-          text: this.$moment.duration(duration * 60000).humanize(),
-          disabled: true,
-          href: "",
-        },
-        {
-          text: type,
-          disabled: true,
-          href: "",
-        },
-        {
-          text: count + (count > 1 ? " " + subType + "s" : subType),
-          disabled: true,
-          href: "",
-        },
-      ];
     },
   },
   created: function () {
-    this.$store.commit("setLearnUnitId", null);
-    this.$store.commit("setLearnUnitId", this.$route.params.id);
+    this.$store.dispatch("getLearnUnitItems");
+    this.$store.commit("setLearnUnitId", String(this.$route.params.id));
     this.$store.commit("setLearnModuleId", null);
     this.$store.commit("setLearnPathId", null);
   },
@@ -188,7 +281,7 @@ export default {
     this.$store.dispatch("getLearnItems");
     this.$store.dispatch("getProductItems");
     this.$store.dispatch("getRoleItems");
-    this.$store.dispatch("getLearnUnitItems");
+    this.$store.dispatch("getLearnKnowledgeChecks");
   },
   watch: {
     learnModulesUnitItems(learnModulesUnitItems) {
@@ -253,5 +346,4 @@ html {
 .dark::-webkit-scrollbar-thumb:hover {
   background: white;
 }
-@import "~simplemde-theme-base/dist/simplemde-theme-base.min.css";
 </style>

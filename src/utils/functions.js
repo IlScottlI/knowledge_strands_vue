@@ -25,8 +25,8 @@ export default {
     );
   },
   // API Functions
-  getSharePointListItems: async (site, accessToken, list, top = 4999) => {
-    return await fetch(`https://graph.microsoft.com/v1.0/sites/${site}/lists/${list}/items?expand=fields&$top=${top}`,
+  getSharePointListItems: async (site, accessToken, list, top = 4999, params = '') => {
+    return await fetch(`https://graph.microsoft.com/v1.0/sites/${site}/lists/${list}/items?expand=fields&$top=${top}${params}`,
       {
         method: "GET",
         headers: { Authorization: "Bearer " + accessToken },
@@ -38,7 +38,7 @@ export default {
   postSharePointListItem: async (site, accessToken, list, data) => {
     return await fetch(`https://graph.microsoft.com/v1.0/sites/${site}/lists/${list}/items/`,
       {
-        body:JSON.stringify(data),
+        body: JSON.stringify(data),
         method: "POST",
         headers: { Authorization: "Bearer " + accessToken, 'Content-Type': 'application/json' },
       }
@@ -49,7 +49,7 @@ export default {
   patchSharePointListItem: async (site, accessToken, list, id, data) => {
     return await fetch(`https://graph.microsoft.com/v1.0/sites/${site}/lists/${list}/items/${id}`,
       {
-        body:JSON.stringify(data),
+        body: JSON.stringify(data),
         method: "PATCH",
         headers: { Authorization: "Bearer " + accessToken, 'Content-Type': 'application/json' },
       }

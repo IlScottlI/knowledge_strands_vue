@@ -121,6 +121,7 @@ export default {
       document.querySelector("#app").__vue__.$vuetify.theme.isDark = darkModeOn;
       console.log(`Dark mode is ${darkModeOn ? "🌒 on" : "☀️ off"}.`);
     });
+    this.$store.dispatch("getUserProfile");
   },
   created() {
     this.$store.commit("setRoutes", router.options.routes);
