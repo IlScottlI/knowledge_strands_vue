@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <mgt-file-list
+      enable-file-upload
+      class="mgt-dark"
+      site-id="pgone.sharepoint.com,4b096747-0b35-4956-b6bb-3ae802451174,98d3a323-daa8-4e56-a37a-edd946b5ba78"
+      item-id="013LWVGDN6Y2GOVW7725BZO354PWSELRRZ"
+    ></mgt-file-list>
+  </div>
+</template>

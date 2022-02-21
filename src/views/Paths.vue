@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div app>
     <v-breadcrumbs :items="breadcrumbs">
       <template v-slot:item="{ item }">
         <v-breadcrumbs-item :to="item.href" :disabled="item.disabled">
@@ -8,11 +8,11 @@
       </template>
     </v-breadcrumbs>
     <div
+      style="max-height: calc(77vh)"
       :class="scrollbarTheme + ' overflow-auto'"
-      style="max-height: calc(80vh)"
     >
       <v-container v-if="path" class="d-flex justify-center">
-        <v-sheet width="900">
+        <v-sheet width="calc(80vw)">
           <v-row class="pa-10" justify="center">
             <v-col cols="12" sm="2">
               <div v-html="path.icon" />

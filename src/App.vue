@@ -1,27 +1,25 @@
 <template>
-  <v-app>
-    <v-app-bar app absolute>
-      <span style="max-width: 850px; cursor: pointer" @click="navigate('/')"
+  <v-app app>
+    <v-app-bar app  max-height="calc(20vh)">
+      <span style="max-width: calc(45vw); cursor: pointer" @click="navigate('/')"
         >Knowledge <strong>STRANDS</strong></span
       >
-
       <v-spacer></v-spacer>
       <mgt-login
         id="login"
         :class="$store.state.theme.isDark ? 'mgt-dark' : ''"
       ></mgt-login>
     </v-app-bar>
-    <v-main>
+    <v-main >
       <router-view v-if="!$store.state.loading" />
     </v-main>
-    <v-footer class="pa-0">
+    <v-footer class="pa-0" app>
       <v-col cols="2" style="cursor: pointer" @click="navigate('/')">
         Knowledge <strong>Strands</strong>
       </v-col>
 
       <v-spacer></v-spacer>
       <v-col cols="1">
-        <v-divider vertical></v-divider>
         <v-menu v-model="menu" offset-x>
           <template v-slot:activator="{ on, attrs }">
             <v-btn text v-bind="attrs" v-on="on">
@@ -35,7 +33,7 @@
               <v-list-item>
                 <v-list-item-action>
                   <v-btn text @click="toggleTheme()">
-                    <v-avatar size="36px" tile class="mx-1">
+                    <v-avatar size="calc(5vw)" tile class="mx-1">
                       <v-img :src="lightIcon" width="30" class="pa-3"></v-img>
                     </v-avatar>
                     Light</v-btn
@@ -45,8 +43,8 @@
               <v-list-item>
                 <v-list-item-action>
                   <v-btn text @click="toggleTheme()">
-                    <v-avatar size="36px" tile class="mx-1">
-                      <v-img :src="darkIcon" width="30" class="pa-3"></v-img>
+                    <v-avatar size="calc(5vw)" tile class="mx-1">
+                      <v-img :src="darkIcon" width="30" class="pa-1"></v-img>
                     </v-avatar>
                     Dark</v-btn
                   >
@@ -134,6 +132,7 @@ export default {
 html {
   overflow: auto;
 }
+
 mgt-login {
   --color: black;
   --font-size: 14px;

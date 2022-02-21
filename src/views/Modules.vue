@@ -9,7 +9,7 @@
     </v-breadcrumbs>
     <div
       :class="scrollbarTheme + ' overflow-auto'"
-      style="max-height: calc(80vh)"
+      style="max-height: calc(77vh)"
     >
       <v-container v-if="learnModule" class="d-flex justify-center">
         <v-sheet width="900">

@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid>
-    <v-row no-gutters>
+  <v-container fluid >
+    <v-row no-gutters :class="scrollbarTheme + ' overflow-auto pa-2'" style="max-height: calc(80vh)" >
       <v-col cols="12">
         <v-sheet class="pa-2" outlined tile>
           <h1 class="ps-4">Browse all</h1>
@@ -11,7 +11,7 @@
         </v-sheet>
       </v-col>
       <v-col cols="3">
-        <v-card outlined tile :class="scrollbarTheme + ' overflow-auto pa-2'">
+        <v-card outlined tile >
           <h1 class="ps-4">Filter</h1>
           <v-divider></v-divider>
           <h3 class="ps-5 pt-4">Category</h3>
@@ -74,8 +74,8 @@
         </v-card>
       </v-col>
       <v-col cols="9">
-        <v-card class="mx-auto">
-          <v-container class="">
+        <v-card :class="scrollbarTheme + ' overflow-auto pa-2'" >
+          <v-container>
             <v-data-iterator
               v-if="$store.state.learnItems"
               :items="learnItems"

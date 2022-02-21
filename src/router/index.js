@@ -54,6 +54,15 @@ const router = new Router({
       icon: mdiHome,
       component: () => import(/* webpackChunkName: "unit" */ '../views/Units'),
     },
+    {
+      id: 5,
+      path: '/qualify',
+      name: 'Qualify',
+      show: false,
+      nav: true,
+      icon: mdiHome,
+      component: () => import(/* webpackChunkName: "qualify" */ '../views/Qualify'),
+    },
   ],
 })
 

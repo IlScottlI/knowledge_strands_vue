@@ -3,7 +3,7 @@
     <div>
       <v-toolbar dark prominent color="#123684" :src="hero" height="360">
       </v-toolbar>
-      <v-card class="mx-4 pa-5" max-width="600" style="margin-top: -300px">
+      <v-card class="mx-4 pa-5" max-width="calc(45vw)" style="margin-top: -300px">
         <v-list-item three-line>
           <v-list-item-content>
             <div class="text-overline mb-4">WELCOME TO KNOWLEDGE STRANDS</div>
@@ -32,12 +32,12 @@
           <v-col v-for="n in topCards" :key="n.path" cols="4">
             <v-card
               dense
-              height="200"
+              height="calc(25vh)"
               style="border-radius: calc(1vw); cursor: pointer"
               :to="n.path"
             >
               <v-row>
-                <v-avatar height="200" width="22%" tile>
+                <v-avatar height="calc(25vh)" width="calc(5vw)" tile>
                   <v-img
                     :src="n.img"
                     style="border-radius: 10px 0px 0px 10px"
@@ -63,12 +63,12 @@
           <v-col v-for="n in continueCards" :key="n.path" cols="4">
             <v-card
               dense
-              height="200"
+              height="calc(20vh)"
               style="border-radius: calc(1vw); cursor: pointer"
               :to="n.path"
             >
               <v-row>
-                <v-avatar height="200" width="22%" tile>
+                <v-avatar height="calc(20vh)" width="22%" tile>
                   <v-img
                     :src="n.img"
                     style="border-radius: 10px 0px 0px 10px"
@@ -125,6 +125,9 @@ export default {
     hero() {
       return this.$store.state.theme.isDark ? this.heroDark : this.heroLight;
     },
+     scrollbarTheme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    },
     userName: {
       get() {
         return this.$store.state.account.name.includes(",")
@@ -151,4 +154,45 @@ export default {
 html {
   overflow: auto;
 }
+.m-icon img {
+  width: 5rem;
+}
+.light::-webkit-scrollbar {
+  width: 15px;
+}
+
+.light::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-left: 1px solid #dadada;
+}
+
+.light::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+  border: solid 3px #e6e6e6;
+  border-radius: 7px;
+}
+
+.light::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.dark::-webkit-scrollbar {
+  width: 15px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: #202020;
+  border-left: 1px solid #2c2c2c;
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: #3e3e3e;
+  border: solid 3px #202020;
+  border-radius: 7px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
 </style>
+

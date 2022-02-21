@@ -5,7 +5,6 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import VueMoment from "vue-moment";
 import moment from "moment";
-import 'simplemde/dist/simplemde.min.css'
 import VueMarkdown from 'vue-markdown'
 import 'highlight.js/styles/default.css';
 import Highlight from 'vue-markdown-highlight'
@@ -30,7 +29,7 @@ Providers.globalProvider = new Msal2Provider({
   authority:
     "https://login.microsoftonline.com/3596192b-fdf5-4e2c-a6fa-acb706c963d8",
   domainHint: "pg.com",
-  redirectUrl: "http://localhost:8080/",
+  redirectUrl: "https://tsp-appserver.na.pg.com/Strands",
 });
 
 async function checkMsal() {
