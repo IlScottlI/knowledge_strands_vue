@@ -31,15 +31,16 @@
               <v-list-item
                 v-for="(item, i) in learnModulesUnitItems"
                 :key="i"
-                @click="handleChange"
-                :to="'/unit/' + item.id"
+                @click="navigate(item.id)"
               >
                 <v-row>
                   <v-col cols="9">
                     <router-link
-                      @click="handleChange"
-                      :to="'/unit/' + item.id"
+                      :to="{ name: 'Unit', query: { id: item.id } }"
                       style="text-decoration: none"
+                      :disabled="!false"
+                      :event="false ? 'click' : ''"
+                      @click="handleChange"
                     >
                       <v-list-item-title style="color: #1976d2">
                         {{ item.Title }}
@@ -47,9 +48,13 @@
                     </router-link>
                   </v-col>
                   <v-col cols="3">
+                    <v-icon color="green" v-if="isComplete(item.id)"
+                      >mdi-check-bold</v-icon
+                    >
                     <small
                       style="color: gray; white-space: nowrap"
                       class="overflow-hidden me-10"
+                      v-else
                     >
                       {{
                         (item.durationInMinutes * 60000) | duration("humanize")
@@ -81,12 +86,35 @@ export default {
         this.$store.commit("setLearnUnitIndex", value);
       },
     },
+    historyJson: {
+      get() {
+        return this.$store.getters.historyJson;
+      },
+    },
+    complete_units: {
+      get() {
+        return this.$store.getters.complete_units;
+      },
+    },
+    learnUnit: {
+      get() {
+        return this.$store.getters.learnUnit;
+      },
+    },
     learnUnitItemsCount: {
       get() {
         return this.$store.state.learnUnitItemsCount;
       },
       set(value) {
         this.$store.commit("setLearnUnitItemsCount", value);
+      },
+    },
+    learnUnitItemsCompleteCount: {
+      get() {
+        return this.$store.state.learnUnitItemsCompleteCount;
+      },
+      set(value) {
+        this.$store.commit("setLearnUnitItemsCompleteCount", value);
       },
     },
     scrollbarTheme() {
@@ -99,19 +127,36 @@ export default {
       return this.$store.getters.learnModulesUnitItems;
     },
   },
+  watch: {
+    complete_units(complete_units) {
+      if (!complete_units) return;
+      this.learnUnitItemsCompleteCount = complete_units.length;
+    },
+  },
+
   methods: {
     ...mapActions(["handleChange"]),
+    navigate(id) {
+      this.$router.replace({ name: "Unit", query: { id: id } });
+      this.handleChange();
+    },
+    isComplete: function (item) {
+      if (!Array.isArray(this.complete_units)) return false;
+      return this.complete_units.filter((e) => {
+        return e.u === Number(item);
+      }).length;
+    },
     nextButton: function (learnModulesUnitItems) {
       let nextIndex = this.learnUnitIndex + 1;
       return learnModulesUnitItems[nextIndex]
-        ? "/unit/" + learnModulesUnitItems[nextIndex].id
+        ? "/unit?id=" + learnModulesUnitItems[nextIndex].id
         : "";
     },
     previousButton: function (learnModulesUnitItems) {
       let previousIndex = this.learnUnitIndex - 1;
       if (previousIndex < 0) return "";
       return learnModulesUnitItems[previousIndex]
-        ? "/unit/" + learnModulesUnitItems[previousIndex].id
+        ? "/unit?id=" + learnModulesUnitItems[previousIndex].id
         : "";
     },
   },

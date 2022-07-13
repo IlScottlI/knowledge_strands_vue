@@ -1,7 +1,9 @@
 <template>
   <v-app app>
-    <v-app-bar app  max-height="calc(20vh)">
-      <span style="max-width: calc(45vw); cursor: pointer" @click="navigate('/')"
+    <v-app-bar app max-height="calc(20vh)">
+      <span
+        style="max-width: calc(45vw); cursor: pointer"
+        @click="navigate('/')"
         >Knowledge <strong>STRANDS</strong></span
       >
       <v-spacer></v-spacer>
@@ -10,7 +12,7 @@
         :class="$store.state.theme.isDark ? 'mgt-dark' : ''"
       ></mgt-login>
     </v-app-bar>
-    <v-main >
+    <v-main>
       <router-view v-if="!$store.state.loading" />
     </v-main>
     <v-footer class="pa-0" app>
@@ -32,7 +34,7 @@
             <v-list>
               <v-list-item>
                 <v-list-item-action>
-                  <v-btn text @click="toggleTheme()">
+                  <v-btn text @click="theme.isDark = false">
                     <v-avatar size="calc(5vw)" tile class="mx-1">
                       <v-img :src="lightIcon" width="30" class="pa-3"></v-img>
                     </v-avatar>
@@ -42,7 +44,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-action>
-                  <v-btn text @click="toggleTheme()">
+                  <v-btn text @click="theme.isDark = true">
                     <v-avatar size="calc(5vw)" tile class="mx-1">
                       <v-img :src="darkIcon" width="30" class="pa-1"></v-img>
                     </v-avatar>

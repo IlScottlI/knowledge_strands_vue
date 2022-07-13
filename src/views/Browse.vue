@@ -1,6 +1,10 @@
 <template>
-  <v-container fluid >
-    <v-row no-gutters :class="scrollbarTheme + ' overflow-auto pa-2'" style="max-height: calc(80vh)" >
+  <v-container fluid>
+    <v-row
+      no-gutters
+      :class="scrollbarTheme + ' overflow-auto pa-2'"
+      style="max-height: calc(80vh)"
+    >
       <v-col cols="12">
         <v-sheet class="pa-2" outlined tile>
           <h1 class="ps-4">Browse all</h1>
@@ -11,84 +15,26 @@
         </v-sheet>
       </v-col>
       <v-col cols="3">
-        <v-card outlined tile >
-          <h1 class="ps-4">Filter</h1>
-          <v-divider></v-divider>
-          <h3 class="ps-5 pt-4">Category</h3>
-          <v-card
-            style="max-height: calc(25vh)"
-            :class="scrollbarTheme + ' overflow-auto'"
-          >
-            <v-list-item-group
-              class="ps-3"
-              v-model="selectedProducts"
-              multiple
-              style="max-height: calc(25vh)"
-            >
-              <v-list-item
-                v-for="(object, key) in learnProductItems"
-                :key="key"
-                dense
-                class="p-0 m-0"
-              >
-                <template v-slot:default="{ active }">
-                  <v-list-item-action>
-                    <v-checkbox :input-value="active"></v-checkbox>
-                  </v-list-item-action>
-                  <v-list-item-content class="p-0 m-0">
-                    {{ object.Title }}
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
-            </v-list-item-group>
-          </v-card>
-          <v-divider></v-divider>
-          <h3 class="ps-5 pt-4">Roles</h3>
-          <v-card
-            :class="scrollbarTheme + ' overflow-auto'"
-            style="max-height: calc(25vh)"
-          >
-            <v-list-item-group
-              class="ps-3"
-              v-model="selectedRoles"
-              multiple
-              style="max-height: calc(25vh)"
-            >
-              <v-list-item
-                v-for="(object, key) in learnRoleItems"
-                :key="key"
-                dense
-                class="p-0 m-0"
-              >
-                <template v-slot:default="{ active }">
-                  <v-list-item-action>
-                    <v-checkbox :input-value="active"></v-checkbox>
-                  </v-list-item-action>
-                  <v-list-item-content class="p-0 m-0">
-                    {{ object.Title }}
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
-            </v-list-item-group>
-          </v-card>
-        </v-card>
+        <filter-items />
       </v-col>
       <v-col cols="9">
-        <v-card :class="scrollbarTheme + ' overflow-auto pa-2'" >
+        <v-card :class="scrollbarTheme + ' overflow-auto pa-2'">
           <v-container>
             <v-data-iterator
-              v-if="$store.state.learnItems"
+              v-if="learnItems"
               :items="learnItems"
-              :search="search"
+              :items-per-page.sync="itemsPerPage"
+              :page.sync="page"
+              :search="searchTerm"
               hide-default-footer
-              :sort-by="sortBy.toLowerCase()"
+              :sort-by="sortBy"
               :sort-desc="sortDesc"
             >
               <template v-slot:header>
                 <v-toolbar class="mb-1">
                   <v-text-field
                     dense
-                    v-model="search"
+                    v-model="searchTerm"
                     clearable
                     flat
                     solo-inverted
@@ -96,35 +42,20 @@
                     prepend-inner-icon="mdi-magnify"
                     label="Search"
                   ></v-text-field>
-                  <template v-if="false">
-                    <v-spacer></v-spacer>
-                    <v-select
-                      v-if="$vuetify.breakpoint.xlAndUp"
-                      dense
-                      v-model="sortBy"
-                      flat
-                      solo-inverted
-                      hide-details
-                      :items="keys"
-                      prepend-inner-icon="mdi-magnify"
-                      label="Sort by"
-                    ></v-select>
-                    <v-spacer></v-spacer>
-                    <v-btn-toggle
-                      v-model="sortDesc"
-                      mandatory
-                      dense
-                      v-if="false"
-                    >
-                      <v-btn depressed color="blue" :value="false">
-                        <v-icon>mdi-arrow-up</v-icon>
-                      </v-btn>
-                      <v-btn depressed color="blue" :value="true">
-                        <v-icon>mdi-arrow-down</v-icon>
-                      </v-btn>
-                    </v-btn-toggle>
-                  </template>
                 </v-toolbar>
+
+                <v-chip-group column>
+                  <v-chip
+                    v-for="(tag, i) in filterTags.filter(
+                      (e) => e.type !== 'hideCompleted'
+                    )"
+                    :key="i"
+                    close
+                    @click:close="handleTagRemove(filterTags, i)"
+                  >
+                    {{ tag.tag }}
+                  </v-chip>
+                </v-chip-group>
               </template>
 
               <template v-slot:default="props">
@@ -143,7 +74,10 @@
                           <v-toolbar-title></v-toolbar-title>
                           <v-btn
                             icon
-                            :to="'/' + routeType(item) + '/' + item.id"
+                            :to="{
+                              path: routeType(item),
+                              query: { id: item.id },
+                            }"
                           >
                             <div v-html="item.icon"></div>
                           </v-btn>
@@ -160,7 +94,7 @@
                         <v-list-item>
                           <v-list-item-subtitle class="blue--text">
                             <router-link
-                              :to="'/' + routeType(item) + '/' + item.id"
+                              :to="'/' + routeType(item) + '?id=' + item.id"
                               style="text-decoration: none"
                               >{{ item.Title }}</router-link
                             >
@@ -191,16 +125,101 @@
                         </v-list-item>
                       </v-list>
                       <v-card-actions>
+                        <v-progress-linear
+                          v-if="
+                            item.progress > 0 && Math.ceil(item.progress) < 99.9
+                          "
+                          v-model="item.progress"
+                          height="25"
+                          color="green"
+                          rounded
+                        >
+                          <strong class="dark"
+                            >{{ Math.ceil(item.progress) }}%</strong
+                          >
+                        </v-progress-linear>
+                        <v-btn
+                          v-else-if="Math.ceil(item.progress) > 99.9"
+                          small
+                          text
+                          color="green"
+                          >COMPLETED<v-icon>mdi-check</v-icon></v-btn
+                        >
                         <v-spacer></v-spacer>
                         <v-btn
+                          v-if="item.progress > 0"
+                          small
+                          class="green--text"
+                          :to="'/' + routeType(item) + '?id=' + item.id"
+                          >{{
+                            Math.ceil(item.progress) > 99.9
+                              ? "View"
+                              : "Continue"
+                          }}</v-btn
+                        >
+                        <v-btn
+                          v-else
                           small
                           class="blue--text"
-                          :to="'/' + routeType(item) + '/' + item.id"
+                          :to="'/' + routeType(item) + '?id=' + item.id"
                           >Start</v-btn
                         >
                       </v-card-actions>
                     </v-card>
                   </v-col>
+                </v-row>
+              </template>
+              <template v-slot:footer>
+                <v-row class="mt-2 mx-5" align="center" justify="center">
+                  <span class="grey--text">Items per page</span>
+                  <v-menu offset-y>
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn
+                        dark
+                        text
+                        color="primary"
+                        class="ml-2"
+                        v-bind="attrs"
+                        v-on="on"
+                      >
+                        {{ itemsPerPage }}
+                        <v-icon>mdi-chevron-down</v-icon>
+                      </v-btn>
+                    </template>
+                    <v-list>
+                      <v-list-item
+                        v-for="(number, index) in itemsPerPageArray"
+                        :key="index"
+                        @click="updateItemsPerPage(number)"
+                      >
+                        <v-list-item-title>{{ number }}</v-list-item-title>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+
+                  <v-spacer></v-spacer>
+
+                  <span class="mr-4 grey--text">
+                    Page {{ page }} of {{ numberOfPages }}
+                  </span>
+                  <v-btn
+                    icon
+                    dark
+                    color="blue darken-3"
+                    class="mr-1"
+                    @click="formerPage"
+                  >
+                    <v-icon>mdi-chevron-left</v-icon>
+                  </v-btn>
+                  <v-btn
+                    icon
+                    dark
+                    color="blue darken-3"
+                    class="ml-1"
+                    @click="nextPage"
+                  >
+                    <v-icon>mdi-chevron-right</v-icon>
+                  </v-btn>
                 </v-row>
               </template>
             </v-data-iterator>
@@ -212,17 +231,20 @@
 </template>
 
 <script>
+import FilterItems from "../components/FilterItems.vue";
 export default {
+  components: {
+    FilterItems,
+  },
   name: "Browse",
   data: () => ({
-    itemsPerPageArray: [4, 8, 12],
-    search: "",
+    itemsPerPageArray: [12, 24, 36, 48, 60],
     filter: {},
     sortDesc: false,
     page: 1,
-    itemsPerPage: 4,
-    sortBy: "duration_in_minutes",
-    keys: ["Title", "duration_in_minutes"],
+    itemsPerPage: 12,
+    sortBy: "Title",
+    keys: ["Title", "products", "Modified"],
     parseKeys: ["levels", "roles", "products"],
     selected: [],
   }),
@@ -233,11 +255,24 @@ export default {
     numberOfPages() {
       return Math.ceil(this.$store.state.learnItems.length / this.itemsPerPage);
     },
-    learnProductItems() {
-      return this.$store.state.learnProductItems;
-    },
     filteredKeys() {
       return this.keys.filter((key) => key !== "id");
+    },
+    searchTerm: {
+      get() {
+        return this.$store.state.searchTerm;
+      },
+      set(value) {
+        this.$store.commit("setSearchTerm", value);
+      },
+    },
+    learnProductItems: {
+      get() {
+        return this.$store.state.learnProductItems;
+      },
+      set(value) {
+        this.$store.commit("setLearnProductItems", value);
+      },
     },
     selectedProducts: {
       get() {
@@ -245,6 +280,30 @@ export default {
       },
       set(value) {
         this.$store.commit("setSelectedProducts", value);
+      },
+    },
+    selectedCategories: {
+      get() {
+        return this.$store.state.selectedCategories;
+      },
+      set(value) {
+        this.$store.commit("setSelectedCategories", value);
+      },
+    },
+    selectedLevels: {
+      get() {
+        return this.$store.state.selectedLevels;
+      },
+      set(value) {
+        this.$store.commit("setSelectedLevels", value);
+      },
+    },
+    filterTags: {
+      get() {
+        return this.$store.state.filterTags;
+      },
+      set(value) {
+        this.$store.commit("setFilterTags", value);
       },
     },
     learnRoleItems() {
@@ -260,23 +319,97 @@ export default {
     },
     learnItems: {
       get() {
+        if (this.$store.state.learnItems.length < 1) return [];
+        let historyJson = this.$store.getters.historyJson;
         let items = this.$store.state.learnItems;
         let learnItems = [];
         if (Array.isArray(items)) {
           items.forEach((object) => {
-            for (const key in object) {
-              if (Object.hasOwnProperty.call(object, key)) {
-                let element = object[key];
-                if (this.parseKeys.includes(key)) {
-                  try {
-                    object[key] = JSON.parse(element);
-                  } catch {
-                    //
+            object.progress = 0;
+            try {
+              for (const key in object) {
+                if (key === "childern") {
+                  let progress = [];
+                  let ids = object[key].split(",");
+                  if (object.type === "Module") {
+                    ids.forEach((unit) => {
+                      let complete = historyJson.progress.complete_units.filter(
+                        (e) => e.u == unit
+                      );
+                      progress.push({
+                        unit: Number(unit),
+                        complete: complete.length,
+                      });
+                    });
+                    object.progressArray = progress;
+                    object.progressItemCount = progress.length;
+                    object.progressItemComplete = progress.filter(
+                      (e) => e.complete > 0
+                    ).length;
+                    object.progressWeight = 100 / object.progressItemCount;
+                    object.progress =
+                      object.progressItemComplete * object.progressWeight;
+                    if (object.progressItemComplete === 0) {
+                      object.progress = 0;
+                    }
+                    if (
+                      object.progressItemCount === object.progressItemComplete
+                    ) {
+                      object.itemComplete = true;
+                    } else {
+                      object.itemComplete = false;
+                    }
+                  }
+                }
+
+                if (Object.hasOwnProperty.call(object, key)) {
+                  let element = object[key];
+                  if (this.parseKeys.includes(key)) {
+                    try {
+                      object[key] = JSON.parse(element);
+                      object[key + "_str"] = element;
+                    } catch {
+                      //
+                    }
                   }
                 }
               }
+            } catch {
+              //
             }
             learnItems.push(object);
+          });
+        }
+
+        if (this.$store.state.hideCompleted) {
+          learnItems = learnItems.filter((e) => e.itemComplete !== true);
+        }
+
+        if (this.filterTags.length) {
+          this.filterTags.forEach((e) => {
+            switch (e.type) {
+              case "products":
+                learnItems = this.filterItems(
+                  learnItems,
+                  "products",
+                  this.selectedProducts
+                );
+                break;
+              case "roles":
+                learnItems = this.filterItems(
+                  learnItems,
+                  "roles",
+                  this.selectedRoles
+                );
+                break;
+              case "levels":
+                learnItems = this.filterItems(
+                  learnItems,
+                  "levels",
+                  this.selectedLevels
+                );
+                break;
+            }
           });
         }
         return learnItems;
@@ -287,6 +420,31 @@ export default {
     },
   },
   methods: {
+    handleTagRemove(filterTags, i) {
+      filterTags.splice(i, 1);
+    },
+    filterItems(items, column, filterItems) {
+      let res = [];
+      if (!filterItems) return;
+      for (let item of items) {
+        if (Array.isArray(item[column])) {
+          filterItems.forEach((e) => {
+            if (item[column].includes(e)) {
+              res.push(item);
+            }
+          });
+        }
+      }
+      let result = [];
+      let map = new Map();
+      for (let item of res) {
+        if (!map.has(item.id)) {
+          map.set(item.id, true);
+          result.push(item);
+        }
+      }
+      return result;
+    },
     routeType(object) {
       if (object.type === "Module") {
         return "module";
@@ -308,6 +466,9 @@ export default {
     this.$store.dispatch("getLearnItems");
     this.$store.dispatch("getProductItems");
     this.$store.dispatch("getRoleItems");
+  },
+  watch: {
+    //
   },
 };
 </script>

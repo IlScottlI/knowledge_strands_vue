@@ -33,19 +33,24 @@
                     <v-icon>mdi-circle-small</v-icon>
                   </template>
                 </v-breadcrumbs>
-                <small>{{ learnModule.learning_objectives }}</small>
-                <div v-html="learnModule.details"></div>
+                <v-spacer></v-spacer>
+                <span style="margin-top: -4rem">
+                  <v-btn small class="xp-tag-hexagon">
+                    {{ learnModule.points }} XP
+                  </v-btn>
+                </span>
+                <small v-html="learnModule.learning_objectives"></small>
               </v-row>
+            </v-col>
+            <v-col cols="auto">
+              <div v-html="learnModule.details"></div>
             </v-col>
             <v-col cols="12" sm="8">
               <h3>Prerequisites</h3>
-              <small>{{ learnModule.prerequisites }}</small>
+              <small v-html="learnModule.prerequisites"></small>
             </v-col>
             <v-col cols="12" sm="8" v-if="learnModulesUnitItems">
-              <v-btn
-                color="primary"
-                :to="'/unit/' + learnModulesUnitItems[0].id"
-              >
+              <v-btn color="primary" :to="'/unit?id=' + startIndex()">
                 Start <v-icon>mdi-chevron-right</v-icon></v-btn
               >
             </v-col>
@@ -55,7 +60,7 @@
               </div>
               <router-link
                 v-if="learnPath"
-                :to="'/path/' + learnPath.id"
+                :to="'/path?id=' + learnPath.id"
                 style="text-decoration: none"
                 >{{ learnPath.Title }}</router-link
               >
@@ -66,7 +71,7 @@
                   <router-link
                     v-for="(item, i) in learnModulesUnitItems"
                     :key="i"
-                    :to="'/unit/' + item.id"
+                    :to="'/unit?id=' + item.id"
                     style="text-decoration: none"
                   >
                     <v-list-item>
@@ -81,6 +86,11 @@
                             | duration("humanize")
                         }}</small>
                       </v-list-item-title>
+                      <v-list-item-action>
+                        <v-icon color="green" v-if="isComplete(item.id)"
+                          >mdi-check-bold</v-icon
+                        >
+                      </v-list-item-action>
                     </v-list-item>
                   </router-link>
                 </v-list-item-group>
@@ -120,8 +130,41 @@ export default {
     learnPath: function () {
       return this.$store.getters.learnPath;
     },
+    historyJson: function () {
+      return this.$store.getters.historyJson;
+    },
+    complete_units: function () {
+      return this.$store.getters.complete_units;
+    },
   },
   methods: {
+    startIndex: function () {
+      try {
+        let index = 0;
+        if (!this.learnModulesUnitItems) return;
+        if (!this.complete_units) return this.learnModulesUnitItems[index].id;
+        if (this.complete_units.length === 0)
+          return this.learnModulesUnitItems[index].id;
+        for (let i = 0; i < this.learnModulesUnitItems.length; i++) {
+          let item = this.learnModulesUnitItems[i];
+          if (this.complete_units.map((e) => e.u).includes(Number(item.id))) {
+            index = i + 1;
+          }
+        }
+        return this.learnModulesUnitItems[index].id
+          ? this.learnModulesUnitItems[index].id
+          : this.learnModulesUnitItems[0].id;
+      } catch {
+        return this.learnModulesUnitItems[0].id;
+      }
+    },
+    isComplete: function (item) {
+      if (!Array.isArray(this.complete_units)) return false;
+      if (this.complete_units.length === 0) return false;
+      return this.complete_units.filter((e) => {
+        return e.u === Number(item);
+      }).length;
+    },
     getCrumbs: function (duration, type, childern) {
       let count = childern ? childern.split(",").length : "";
       let subType = "";
@@ -145,7 +188,7 @@ export default {
           href: "",
         },
         {
-          text: count + (count > 1 ? " " + subType + "s" : subType),
+          text: count + (count > 1 ? " " + subType + "s" : " " + subType),
           disabled: true,
           href: "",
         },
@@ -154,7 +197,7 @@ export default {
   },
   created: function () {
     this.$store.commit("setLearnModuleId", null);
-    this.$store.commit("setLearnModuleId", this.$route.params.id);
+    this.$store.commit("setLearnModuleId", this.$route.query.id);
     this.$store.commit("setLearnPathId", null);
     this.$store.commit("setLearnUnitId", null);
   },
@@ -166,8 +209,18 @@ export default {
   },
   watch: {
     learnModule(item) {
-      if (!item) return;
-      this.$store.commit("setLearnPathId", String(item.pathId));
+      if (typeof item !== "object") return;
+      if (!this.$store.learnUserProfile) return;
+      if (item.id) {
+        this.$store.commit("setLearnPathId", String(item.pathId));
+        let jsonCurrent = this.$store.getters.jsonCurrent;
+        jsonCurrent.module = item.id;
+        this.$store.dispatch("patchUserProfile", {
+          fields: {
+            current_json: JSON.stringify(jsonCurrent),
+          },
+        });
+      }
     },
   },
 };
@@ -176,6 +229,15 @@ export default {
 <style>
 html {
   overflow: auto;
+}
+hexagon:before {
+  transition: background-color 0.8s ease;
+  transition-delay: 0.4s;
+}
+.xp-tag-hexagon,
+.xp-tag-hexagon:before {
+  transition: background-color 0.8s ease;
+  transition-delay: 0.4s;
 }
 .m-icon img {
   width: 5rem;

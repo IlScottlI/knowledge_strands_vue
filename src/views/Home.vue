@@ -10,11 +10,9 @@
             <v-list-item-title class="text-h5 mb-1">
               Discover your path
             </v-list-item-title>
-            <v-list-item-subtitle
-              >Whether you're just starting or an experienced professional, our
+            <v-list-item-subtitle>Whether you're just starting or an experienced professional, our
               hands-on approach helps you arrive at your goals faster, with more
-              confidence and at your own pace.</v-list-item-subtitle
-            >
+              confidence and at your own pace.</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
 
@@ -30,21 +28,13 @@
       <v-container style="margin-top: calc(-5vh)">
         <v-row>
           <v-col v-for="n in topCards" :key="n.path" cols="4">
-            <v-card
-              dense
-              height="calc(25vh)"
-              style="border-radius: calc(1vw); cursor: pointer"
-              :to="n.path"
-            >
+            <v-card dense height="calc(25vh)" style="border-radius: calc(1vw); cursor: pointer" :to="n.path">
               <v-row>
                 <v-avatar height="calc(25vh)" width="calc(5vw)" tile>
-                  <v-img
-                    :src="n.img"
-                    style="border-radius: 10px 0px 0px 10px"
-                  ></v-img>
+                  <v-img :src="n.img" style="border-radius: 10px 0px 0px 10px"></v-img>
                 </v-avatar>
                 <span>
-                  <v-card-text class="text-overline">{{ n.title }}</v-card-text>
+                  <v-card-text class="text-overline" style="text-transform: none !important">{{ n.title }}</v-card-text>
                   <v-card-title>{{ n.desc }}</v-card-title>
                 </span>
               </v-row>
@@ -53,26 +43,14 @@
         </v-row>
         <v-divider></v-divider>
         <v-row cols="12">
-          <v-col
-            cols="12"
-            class="text-center text-h4 mt-5"
-            v-if="continueCards.length"
-          >
+          <v-col cols="12" class="text-center text-h4 mt-5" v-if="continueCards.length">
             Continue working on...
           </v-col>
           <v-col v-for="n in continueCards" :key="n.path" cols="4">
-            <v-card
-              dense
-              height="calc(20vh)"
-              style="border-radius: calc(1vw); cursor: pointer"
-              :to="n.path"
-            >
+            <v-card dense height="calc(20vh)" style="border-radius: calc(1vw); cursor: pointer" :to="n.path">
               <v-row>
                 <v-avatar height="calc(20vh)" width="22%" tile>
-                  <v-img
-                    :src="n.img"
-                    style="border-radius: 10px 0px 0px 10px"
-                  ></v-img>
+                  <v-img :src="n.img" style="border-radius: 10px 0px 0px 10px"></v-img>
                 </v-avatar>
                 <span>
                   <v-card-text class="text-overline">{{ n.title }}</v-card-text>
@@ -92,13 +70,14 @@ import heroDark from "../assets/hero_background_dark.svg";
 import heroLight from "../assets/hero_background_light.svg";
 import learnPath from "../assets/featured_learning-path_tablet.png";
 import certPath from "../assets/featured_certifications_tablet.png";
-import learnTV from "../assets/learn-tv-tile.jpg";
+// import eMan from "../assets/modal-next-steps.svg";
 export default {
   name: "Home",
   data: () => ({
     model: 0,
     heroDark,
     heroLight,
+    certPath,
     topCards: [
       {
         img: learnPath,
@@ -106,17 +85,17 @@ export default {
         desc: "Learn a complete strand path",
         path: "/browse?resource_type=learning%20path",
       },
+      // {
+      //   img: eMan,
+      //   title: "eManufacturing",
+      //   desc: "eLearning",
+      //   path: "/eLearning",
+      // },
       {
         img: certPath,
-        title: "STEP-UP CARD CERTIFICATION",
-        desc: "Ready to Qualify",
-        path: "/qualify",
-      },
-      {
-        img: learnTV,
-        title: "LEARN TV",
-        desc: "Watch Recorded Training",
-        path: "/tv",
+        title: "DEV DOCS",
+        desc: "Development Documentation",
+        path: "/docs",
       },
     ],
     continueCards: [],
@@ -125,15 +104,15 @@ export default {
     hero() {
       return this.$store.state.theme.isDark ? this.heroDark : this.heroLight;
     },
-     scrollbarTheme() {
+    scrollbarTheme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
     userName: {
       get() {
         return this.$store.state.account.name.includes(",")
           ? this.$store.state.account.name.split(",")[1] +
-              " " +
-              this.$store.state.account.name.split(",")[0]
+          " " +
+          this.$store.state.account.name.split(",")[0]
           : this.$store.state.account.name;
       },
       set(value) {
@@ -154,9 +133,11 @@ export default {
 html {
   overflow: auto;
 }
+
 .m-icon img {
   width: 5rem;
 }
+
 .light::-webkit-scrollbar {
   width: 15px;
 }
@@ -195,4 +176,3 @@ html {
   background: white;
 }
 </style>
-

@@ -1,4 +1,5 @@
 
+import Swal from 'sweetalert2';
 export default {
   log: (e) => {
     console.log(e);
@@ -33,7 +34,14 @@ export default {
       }
     ).then((req) =>
       req.json()
-    );
+    ).catch(e => {
+      Swal.fire({
+        title: 'Oh Snap!',
+        text: e,
+        icon: 'error',
+        confirmButtonText: 'Alright'
+      })
+    });
   },
   postSharePointListItem: async (site, accessToken, list, data) => {
     return await fetch(`https://graph.microsoft.com/v1.0/sites/${site}/lists/${list}/items/`,
@@ -44,7 +52,14 @@ export default {
       }
     ).then((req) =>
       req.json()
-    );
+    ).catch(e => {
+      Swal.fire({
+        title: 'Oh Snap!',
+        text: e,
+        icon: 'error',
+        confirmButtonText: 'Alright'
+      })
+    });
   },
   patchSharePointListItem: async (site, accessToken, list, id, data) => {
     return await fetch(`https://graph.microsoft.com/v1.0/sites/${site}/lists/${list}/items/${id}`,
@@ -55,18 +70,26 @@ export default {
       }
     ).then((req) =>
       req.json()
+    ).catch(e => {
+      Swal.fire({
+        title: 'Oh Snap!',
+        text: e,
+        icon: 'error',
+        confirmButtonText: 'Alright'
+      })
+    });
+  },
+  geteLearningItems: async (email) => {
+    return await fetch(`https://tsp-appserver.na.pg.com/APIs/eManufacturing/get_eLearning.php?email=${email}`
+    ).then((req) =>
+      req.json()
     );
   },
-  getAccessToken: () => {
-    let key;
-    for (let index = 0; index < localStorage.length; index++) {
-      const element = Object.keys(localStorage)[index];
-      if (element.includes('accesstoken')) {
-        key = element;
-      }
-    }
-    let accessToken = JSON.parse(localStorage.getItem(key)).secret;
-    return accessToken;
+  geteLearningSkillBlockItems: async (email) => {
+    return await fetch(`https://tsp-appserver.na.pg.com/APIs/eManufacturing/getSkillBlocks.php?email=${email}`
+    ).then((req) =>
+      req.json()
+    );
   }
 };
 

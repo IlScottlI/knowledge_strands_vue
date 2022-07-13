@@ -1,0 +1,2282 @@
+{
+  "Lists": null,
+  "Challenges": null,
+  "Progress": {
+    "completedLearningItems": [
+      {
+        "title": "learn-bizapps.publish-share-power-bi.1-introduction-content-packs",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:18:36.0941628Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.2-publish-reports",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:18:42.8058275Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.3-print-export-reports",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:18:45.1378111Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.5-power-bi-mobile",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:19:48.6820655Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.6-create-groups",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:19:53.5581675Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.7-build-apps",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:19:56.5589958Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.8-use-apps",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:19:59.4071618Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.10-integrate-onedrive",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:20:02.4821633Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.11-publish-web",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:20:06.6454945Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.12-check",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:21:53.8105802Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi.13-summary",
+        "type": "unit",
+        "completedAt": "2022-02-04T15:21:56.3601461Z"
+      },
+      {
+        "title": "learn-bizapps.publish-share-power-bi",
+        "type": "module",
+        "completedAt": "2022-02-04T15:21:56.3601581Z"
+      },
+      {
+        "title": "learn-m365.mgt-intro.2-what-graph-toolkit",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:37:02.3433123Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.introduction",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:37:10.666663Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.what-power-bi",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:37:12.8785389Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.data-model-visualizations",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:37:25.4124685Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.security-administration",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:37:57.3097173Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.customer-case-study-miami-heat",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:38:01.9406899Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.power-bi-action",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:38:08.074051Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.knowledge-check",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:42:13.102475Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi.summary-resources",
+        "type": "unit",
+        "completedAt": "2021-11-09T19:42:15.5417796Z"
+      },
+      {
+        "title": "learn-bizapps.wwl.introduction-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-09T19:42:15.5417901Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.1-why-power-bi",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:46:03.2086657Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.2-find-content",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:47:24.4996887Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.3-navigate-content",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:47:28.6549843Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.4-collaborate-and-share",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:47:33.5542936Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.5-lab-1",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:47:37.6626988Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.6-knowledge-check",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:51:06.3277795Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service.7-summary",
+        "type": "unit",
+        "completedAt": "2021-11-12T12:51:13.6719847Z"
+      },
+      {
+        "title": "learn-bizapps.intro-to-power-bi-service",
+        "type": "module",
+        "completedAt": "2021-11-12T12:51:13.671995Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi.1-filtering-data",
+        "type": "unit",
+        "completedAt": "2021-11-12T13:45:14.8441382Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi.2-exploring-with-numbers",
+        "type": "unit",
+        "completedAt": "2021-11-12T13:45:27.1093914Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi.3-asking-questions-data",
+        "type": "unit",
+        "completedAt": "2021-11-12T13:45:34.5743604Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi.4-lab-2",
+        "type": "unit",
+        "completedAt": "2021-11-12T13:47:58.0957822Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi.5-knowledge-check",
+        "type": "unit",
+        "completedAt": "2021-11-12T13:48:48.5513038Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi.6-summary",
+        "type": "unit",
+        "completedAt": "2021-11-12T13:48:51.1115263Z"
+      },
+      {
+        "title": "learn-bizapps.analyze-explore-data-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-12T13:48:51.1115374Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.1-overview-power-bi-desktop",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:53:16.9889236Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.2-getting-started-power-bi-desktop",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:53:28.8549292Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.3-connnect-data-sources-power-bi-desktop",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:53:39.1632515Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.3b-data-from-excel",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:53:42.3591356Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.4-clean-data-query-editor",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:53:52.2687513Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.5-advanced-data-sources-transformation",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:54:03.4293438Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.6-cleaning-data",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:54:07.44391Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.7-knowledge-check",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:54:50.592174Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:54:53.0973445Z"
+      },
+      {
+        "title": "learn-bizapps.get-data-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-15T19:54:53.0973542Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.1-intro-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:55:56.0051915Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.2-create-simple-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:56:00.2294641Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.4-create-slicers",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:58:50.0904351Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.5-map-visualizations",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:58:53.8042821Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.6-create-matrixes-tables",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:58:57.2993356Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.7-create-scatter-charts",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:59:00.7770254Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.10-modify-colors",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:59:07.3534943Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.12-formatting",
+        "type": "unit",
+        "completedAt": "2021-11-15T19:59:11.1833639Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.20-check",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:00:03.2650681Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi.21-summary",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:00:06.0326198Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-in-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-15T20:00:06.0326341Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.1-overview-power-bi",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:05:52.8033927Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.2-how-to-manage-data-relationships",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:06:08.6430289Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.3-create-calculated-columns",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:06:11.1330983Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.4-optimize-data-models",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:06:14.2726503Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.4b-create-calculated-measures",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:06:16.5567483Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.5-create-calculated-tables",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:06:18.4187696Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.6-explore-time-based-data",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:06:21.1436657Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:07:29.4862273Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-15T20:07:31.9892253Z"
+      },
+      {
+        "title": "learn-bizapps.model-data-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-15T20:07:31.989235Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:45:31.755366Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.2-identify",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:45:35.1396564Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.3-determine",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:45:38.2120014Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.4-define-interface",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:45:53.9129509Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.5-define-experience",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:46:04.3720964Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.6-explore-designs",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:46:07.467692Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:46:31.6422527Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:46:34.5490698Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-requirements",
+        "type": "module",
+        "completedAt": "2021-11-16T12:46:34.5490966Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:59:38.3779489Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models.2-star-schema-design",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:59:41.8760971Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models.3-analytic-queries",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:59:47.1257165Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models.4-report-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-16T12:59:50.4708905Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models.5-check",
+        "type": "unit",
+        "completedAt": "2021-11-16T13:00:49.8478627Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models.6-summary",
+        "type": "unit",
+        "completedAt": "2021-11-16T13:00:52.7077039Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-models",
+        "type": "module",
+        "completedAt": "2021-11-16T13:00:52.707711Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.1-introduction-power-bi-service",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:39:41.7100726Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.2-quick-insights",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:04.8795191Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.3-create-configure-dashboard",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:11.2723103Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.4-ask-questions",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:17.8337952Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.5-custom-qa",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:25.0022378Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.6-share-dashboards",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:31.8255668Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.7-display-full-screen",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:35.7842571Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.8-edit-tile-details",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:39.6438875Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.9-get-more-space-on-dashboard",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:40:46.9244445Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.11-check",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:41:22.0580323Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi.12-summary",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:41:25.2010418Z"
+      },
+      {
+        "title": "learn-bizapps.explore-data-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-17T02:41:25.2010535Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:41:40.9658394Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.2-distribute-report-dashboard",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:41:45.5440831Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.3-monitor-usage-performance",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:41:54.9228616Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.4-development-lifecycle-strategy",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:41:59.5180905Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.5-troubleshoot-data",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:42:09.4548846Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.6-data-protection",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:42:22.1090823Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.8-check",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:43:13.4180174Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi.9-summary",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:43:17.702843Z"
+      },
+      {
+        "title": "learn-bizapps.create-manage-workspaces-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-17T02:43:17.7028525Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:43:35.2122686Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.2-report-parameters",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:43:39.7140684Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.3-what-if-parameters",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:43:50.8571016Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.4-power-bi-gateway",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:43:58.3033877Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.5-dataset-refresh",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:44:02.5793181Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.6-incremental-refresh",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:44:06.6324774Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.7-manage-datasets",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:44:27.3173899Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.8-troubleshoot-connectivity",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:44:32.7526762Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.9-query-caching",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:44:38.0011168Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.10-check",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:45:12.6791928Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi.11-summary",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:45:15.9112108Z"
+      },
+      {
+        "title": "learn-bizapps.manage-datasets-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-17T02:45:15.9112221Z"
+      },
+      {
+        "title": "learn-bizapps.row-level-security-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:45:34.2762262Z"
+      },
+      {
+        "title": "learn-bizapps.row-level-security-power-bi.2-static-method",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:45:39.4953263Z"
+      },
+      {
+        "title": "learn-bizapps.row-level-security-power-bi.3-dynamic-method",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:45:42.7200042Z"
+      },
+      {
+        "title": "learn-bizapps.row-level-security-power-bi.4-check",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:46:08.4831981Z"
+      },
+      {
+        "title": "learn-bizapps.row-level-security-power-bi.5-summary",
+        "type": "unit",
+        "completedAt": "2021-11-17T02:46:11.61482Z"
+      },
+      {
+        "title": "learn-bizapps.row-level-security-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-17T02:46:11.6148267Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:01:45.0093882Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.2-data-files",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:01:49.1630774Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.3-relational-data",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:01:54.0290917Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.4-nosql-database",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:01.8931709Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.5-online-services",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:05.8194067Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.6-storage-mode",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:09.5361713Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.7-azure-analysis-services",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:17.5512721Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.8-performance-issues",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:23.8591421Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.9-import-errors",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:28.5359394Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.lab-prepare",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:02:32.8132782Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.10-check",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:03:29.5713362Z"
+      },
+      {
+        "title": "learn-bizapps.get-data.11-summary",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:03:32.4514113Z"
+      },
+      {
+        "title": "learn-bizapps.get-data",
+        "type": "module",
+        "completedAt": "2021-11-17T03:03:32.4514231Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:03:51.9487423Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.2-shape-data",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:03:56.938202Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.3-data-structure",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:04:02.8502995Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.4-column-data-types",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:04:08.0665002Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.5-combine-tables",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:04:11.2758643Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.6-profile-data",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:04:15.9018088Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.7-advanced-editor",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:04:41.4895676Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.8-lab",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:04:44.6496056Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.9-check",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:06:04.1506099Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi.10-summary",
+        "type": "unit",
+        "completedAt": "2021-11-17T03:06:06.8621351Z"
+      },
+      {
+        "title": "learn-bizapps.clean-data-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-17T03:06:06.86215Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:12:31.1796725Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.2-add-visualization",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:12:34.6942559Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.3-effective-visualization",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:12:37.8506814Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.4-format",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:12:45.3287589Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.5-custom",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:12:50.0424547Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.6-python-visual",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:12:53.8406991Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.7-key-performance-indicators",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:13:35.5931107Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.8-lab",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:13:39.4105607Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.9-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:14:33.2355098Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi.10-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:14:35.7132172Z"
+      },
+      {
+        "title": "learn-bizapps.visuals-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-18T12:14:35.7132306Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:14:54.873717Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.2-report-layout",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:14:58.8556049Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.3-buttons-bookmarks-selections",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:05.4697672Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.4-report-navigation",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:09.2907741Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.5-basic-interactions",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:16.6139022Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.6-advanced-interactions",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:23.4175179Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.7-conditional-formatting",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:29.4790265Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.8-slicer-filters-sort",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:33.2565634Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.9-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:37.1646957Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.10-comment",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:40.798585Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.11-tune-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:15:57.2688849Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.12-reports-mobile",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:16:01.4691714Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.13-lab",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:16:06.2592662Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.14-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:16:49.3227105Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi.15-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:16:51.8736271Z"
+      },
+      {
+        "title": "learn-bizapps.data-driven-story-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-18T12:16:51.8736608Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:17:37.5195432Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.2-data-alerts",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:17:42.7859885Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.3-explore-data",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:17:46.6763325Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.4-dashboard-theme",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:17:51.5092743Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.5-pin-live-report",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:17:55.6385982Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.6-configure-real-time-dashboard",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:17:59.0410373Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.7-configure-data-classification",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:18:05.9979478Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.8-set-mobile-view",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:18:09.7106419Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.9-lab",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:18:12.6326644Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.10-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:18.3205187Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi.11-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:21.2047234Z"
+      },
+      {
+        "title": "learn-bizapps.create-dashboards-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-18T12:19:21.2047363Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:43.2158157Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.2-get-data",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:47.001309Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.3-paginated-report",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:50.924273Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.4-charts",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:54.610124Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.5-publish",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:19:57.7708251Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.6-lab",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:20:01.3072737Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:20:39.7144144Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:20:42.3054203Z"
+      },
+      {
+        "title": "learn-bizapps.create-paginated-reports-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-18T12:20:42.3054345Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-structure.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:32:15.9047806Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-structure.2-design-analytical-report-layout",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:32:21.687063Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-structure.3-produce-guided-experience",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:32:26.7479907Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-structure.4-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:02.7253789Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-structure.5-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:05.5381737Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-structure",
+        "type": "module",
+        "completedAt": "2021-11-18T12:34:05.5381807Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:13.610126Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.2-report-objects",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:16.4999659Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.3-report-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:19.5378997Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.4-visuals-layout",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:24.151909Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.5-design",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:27.4350233Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.6-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:34:58.3228468Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports.7-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:01.2056396Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-reports",
+        "type": "module",
+        "completedAt": "2021-11-18T12:35:01.2056483Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:21.7641802Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.2-report-structure",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:24.7263584Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.3-slicers",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:27.6452876Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.4-advanced-filtering",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:30.0751294Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.5-consumption-time",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:32.4407489Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.6-filter-techniques",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:36.4391955Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.7-feedback-configuration",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:35:39.096944Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.8-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:05.0190988Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters.9-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:08.2180439Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-filters",
+        "type": "module",
+        "completedAt": "2021-11-18T12:36:08.2180553Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:16.449872Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.2-design-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:20.3599411Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.3-design-app-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:23.7643673Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.4-bookmarks",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:26.7533932Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.5-design-navigation-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:32.1551729Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.6-visual-headers",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:36.9899296Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.7-design-built-in-assistance",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:39.4825116Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.8-use-specialized-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:36:43.2328299Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.9-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:02.1691106Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience.10-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:04.7199637Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-user-experience",
+        "type": "module",
+        "completedAt": "2021-11-18T12:37:04.7199758Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:12.2161951Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.2-design-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:16.6001829Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.3-create-report",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:21.0262919Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.4-mobile-reports",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:23.5645087Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.5-accessibility",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:26.4400377Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.6-publish-manage",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:29.3017915Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:45.0665557Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:37:47.5525317Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-effective-ui",
+        "type": "module",
+        "completedAt": "2021-11-18T12:37:47.5525406Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:30.7699636Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.2-statistical-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:34.8562896Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.3-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:38.9459781Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.4-group-data",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:41.9426802Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.5-clustering-techniques",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:44.3840723Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.6-time-series-analysis",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:46.7489303Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.7-analyze-feature",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:50.0231418Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.8-advanced-analytics-custom-visuals",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:52.446766Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.9-quick-insights",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:54.7926085Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.10-ai-insights",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:39:56.9938211Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.11-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:08.0107143Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi.12-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:10.8384861Z"
+      },
+      {
+        "title": "learn-bizapps.perform-analytics-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-18T12:40:10.8384991Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:20.0439275Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.2-visual",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:23.1093509Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.3-key-influencers",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:27.3448651Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.4-decomposition-tree",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:31.3074822Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.5-lab",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:40:34.7235336Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.6-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:41:16.8889059Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi.7-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:41:19.0866054Z"
+      },
+      {
+        "title": "learn-bizapps.ai-visuals-power-bi",
+        "type": "module",
+        "completedAt": "2021-11-18T12:41:19.0866144Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:28.0225836Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.2-workspaces",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:31.0293052Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.3-impact",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:34.614445Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.4-permissions",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:36.8817561Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.5-apps",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:39.5294956Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.6-sharing",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:41.9515735Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.7-publish",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:44.2486349Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.8-embed",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:47.6249318Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.9-sensitivity",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:50.4247239Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.10-privacy",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:51:52.6780142Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.11-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:08.6445142Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration.12-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:11.0762228Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-collaboration",
+        "type": "module",
+        "completedAt": "2021-11-18T12:52:11.0762355Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:18.6309289Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.2-metrics",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:21.2943404Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.3-metrics-new",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:23.7604142Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.4-logs",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:26.1842794Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.5-activity-log",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:31.4297212Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.6-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:48.7907109Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor.7-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:51.5317666Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-monitor",
+        "type": "module",
+        "completedAt": "2021-11-18T12:52:51.5317758Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:52:58.5535798Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.2-tools",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:00.9555193Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.3-steward",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:03.1714097Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.4-administrator",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:05.8137463Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.5-tasks",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:08.3242492Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.6-typical-tools",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:10.2028666Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:27.3573715Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:29.583174Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-intro",
+        "type": "module",
+        "completedAt": "2021-11-18T12:53:29.5831837Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-environment.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:35.783823Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-environment.2-user-accounts",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:38.9681973Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-environment.3-licensing",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:41.0882411Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-environment.4-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:55.5631588Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-environment.5-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:53:58.2224307Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-environment",
+        "type": "module",
+        "completedAt": "2021-11-18T12:53:58.2224391Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:05.3070496Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.2-elements",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:07.9623435Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.3-configure",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:10.3538947Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.4-deploy",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:12.3993633Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.5-embed",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:14.5847094Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.6-help",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:16.8321707Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:38.6162846Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T12:54:41.5333287Z"
+      },
+      {
+        "title": "learn-bizapps.power-bi-admin-governance",
+        "type": "module",
+        "completedAt": "2021-11-18T12:54:41.5333381Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:11:42.6677564Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.2-formulas",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:11:47.8658126Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.3-data-types",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:11:54.4602319Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.4-functions",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:11:57.2177591Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.5-operators",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:12:42.1508732Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.6-variables",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:12:48.0462826Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.7-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:12.311119Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas.8-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:14.915948Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-write-formulas",
+        "type": "module",
+        "completedAt": "2021-11-18T13:13:14.9159569Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:26.3441793Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables.2-calculated-columns",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:29.7100891Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables.3-row-context",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:32.3393471Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables.4-technique",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:34.6315513Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables.5-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:50.7815535Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables.6-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:13:52.9562776Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-calculated-tables",
+        "type": "module",
+        "completedAt": "2021-11-18T13:13:52.9562857Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:01.8410727Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.2-simple-measures",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:06.9183064Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.3-compound-measures",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:10.030576Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.4-quick-measures",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:12.574051Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.5-compare-calculated-columns-measures",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:15.3246031Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.6-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:56.821459Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures.7-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:14:59.9250506Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-add-measures",
+        "type": "module",
+        "completedAt": "2021-11-18T13:14:59.9250584Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-iterator-functions.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:15:09.5132389Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-iterator-functions.2-aggregation-iterator-functions",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:15:13.5367464Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-iterator-functions.3-calculate-ranks",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:15:20.7013751Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-iterator-functions.4-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:15:44.4056611Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-iterator-functions.5-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:15:47.0227898Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-iterator-functions",
+        "type": "module",
+        "completedAt": "2021-11-18T13:15:47.022797Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:15:56.2395984Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.2-modify-filter-context",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:00.5992781Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.3-filter-modifier-functions",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:05.3854553Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.4-examine-filter-context",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:11.3759733Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.5-context-transition",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:14.1973331Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.6-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:31.3573416Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter.7-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:33.6155687Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-modify-filter",
+        "type": "module",
+        "completedAt": "2021-11-18T13:16:33.6155777Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-time-intelligence.1-introduction",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:41.0519485Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-time-intelligence.2-functions",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:44.0637733Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-time-intelligence.3-calculations",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:16:55.5407725Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-time-intelligence.4-check",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:17:13.8042511Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-time-intelligence.5-summary",
+        "type": "unit",
+        "completedAt": "2021-11-18T13:17:16.1806911Z"
+      },
+      {
+        "title": "learn-bizapps.dax-power-bi-time-intelligence",
+        "type": "module",
+        "completedAt": "2021-11-18T13:17:16.1806982Z"
+      }
+    ]
+  },
+  "Ratings": [
+    {
+      "lastRatingScore": 0,
+      "userId": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+      "ratingScore": 5,
+      "questionAndAnswers": [
+        {
+          "questionId": "rating-module",
+          "answerIds": [],
+          "comments": ""
+        }
+      ],
+      "metadata": {
+        "ratingLocation": "module_completion_page",
+        "moduleProgress": 1
+      },
+      "id": "b691b06d-704c-4f72-a8d7-9baf15285c49",
+      "pageId": "learn-bizapps.wwl.introduction-power-bi",
+      "pageType": "learn",
+      "pageKind": "module",
+      "locale": "en-us",
+      "branch": "live",
+      "updatedAt": "2021-11-12T00:10:23.4439814Z"
+    }
+  ],
+  "Certifications": null,
+  "XP": {
+    "totalPoints": 47925,
+    "level": {
+      "levelNumber": 7,
+      "pointsLow": 32300,
+      "pointsHigh": 48499
+    },
+    "nextLevelNumber": 8,
+    "currentLevelPointsEarned": 15625,
+    "pointsToNextLevel": 575,
+    "achievements": [
+      {
+        "awardUid": "learn-bizapps.publish-and-share-with-power-bi-desktop.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2022-02-04T15:21:56.5471576Z",
+        "sourceUid": "learn-bizapps.publish-share-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.use-dax-power-bi-desktop.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:17:16.5386418Z",
+        "sourceUid": "learn-bizapps.use-dax-power-bi-desktop",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-time-intelligence.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:17:16.5386392Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-time-intelligence",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-modify-filter.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:16:33.883115Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-modify-filter",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-iterator-functions.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:15:47.4147882Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-iterator-functions",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-add-measures.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:15:00.1258195Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-add-measures",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-add-calculated-tables.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:13:53.4380006Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-add-calculated-tables",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-write-formulas.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T13:13:15.184304Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-write-formulas",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.administer-power-bi-p1.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:54:41.7270786Z",
+        "sourceUid": "learn-bizapps.administer-power-bi-part-1",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-admin-governance.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:54:41.7270765Z",
+        "sourceUid": "learn-bizapps.power-bi-admin-governance",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-admin-environment.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:53:58.4824869Z",
+        "sourceUid": "learn-bizapps.power-bi-admin-environment",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-admin-intro.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:53:29.7588144Z",
+        "sourceUid": "learn-bizapps.power-bi-admin-intro",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-admin-monitor.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:52:51.7273009Z",
+        "sourceUid": "learn-bizapps.power-bi-admin-monitor",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-admin-collaboration.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:52:11.257693Z",
+        "sourceUid": "learn-bizapps.power-bi-admin-collaboration",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.data-in-analysis-power-bi.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:41:19.2798861Z",
+        "sourceUid": "learn-bizapps.data-analysis-power-bi",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.ai-visuals-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:41:19.2798844Z",
+        "sourceUid": "learn-bizapps.ai-visuals-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.perform-analytics-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:40:11.0497297Z",
+        "sourceUid": "learn-bizapps.perform-analytics-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:37:47.9534331Z",
+        "sourceUid": "learn-bizapps.power-bi-effective",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective-ui.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:37:47.9534292Z",
+        "sourceUid": "learn-bizapps.power-bi-effective-ui",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective-user-experience.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:37:04.9420774Z",
+        "sourceUid": "learn-bizapps.power-bi-effective-user-experience",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective-filters.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:36:08.4398316Z",
+        "sourceUid": "learn-bizapps.power-bi-effective-filters",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective-reports.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:35:01.5292303Z",
+        "sourceUid": "learn-bizapps.power-bi-effective-reports",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective-structure.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:34:05.8098969Z",
+        "sourceUid": "learn-bizapps.power-bi-effective-structure",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.visual-data-power-bi.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:20:42.5390896Z",
+        "sourceUid": "learn-bizapps.visual-data-power-bi",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.create-paginated-reports-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:20:42.5390877Z",
+        "sourceUid": "learn-bizapps.create-paginated-reports-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.create-dashboards-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:19:21.4282228Z",
+        "sourceUid": "learn-bizapps.create-dashboards-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.data-driven-story-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:16:52.0597165Z",
+        "sourceUid": "learn-bizapps.data-driven-story-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.visuals-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-18T12:14:35.8941738Z",
+        "sourceUid": "learn-bizapps.visuals-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.data-preparation-in-power-bi.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-17T03:06:07.087047Z",
+        "sourceUid": "learn-bizapps.data-preparation-in-power-bi",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.clean-transform-and-load-data-in-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-17T03:06:07.0870449Z",
+        "sourceUid": "learn-bizapps.clean-data-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.get-data.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-17T03:03:32.6367672Z",
+        "sourceUid": "learn-bizapps.get-data",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.manage-workspaces-datasets-power-bi.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-17T02:46:11.8290501Z",
+        "sourceUid": "learn-bizapps.manage-workspaces-datasets-power-bi",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.row-level-security-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-17T02:46:11.8290484Z",
+        "sourceUid": "learn-bizapps.row-level-security-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.manage-datasets-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-17T02:45:17.5419657Z",
+        "sourceUid": "learn-bizapps.manage-datasets-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.create-manage-workspaces-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-17T02:43:17.8895479Z",
+        "sourceUid": "learn-bizapps.create-manage-workspaces-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.explore-data-with-power-bi-desktop.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-17T02:41:25.4323425Z",
+        "sourceUid": "learn-bizapps.explore-data-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.dax-power-bi-models.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-16T13:00:52.9257026Z",
+        "sourceUid": "learn-bizapps.dax-power-bi-models",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.power-bi-effective-requirements.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-16T12:46:34.7562116Z",
+        "sourceUid": "learn-bizapps.power-bi-effective-requirements",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.model-data-with-power-bi-desktop.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-15T20:07:32.2151906Z",
+        "sourceUid": "learn-bizapps.model-data-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.create-visuals-power-bi-desktop.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-15T20:00:06.3400471Z",
+        "sourceUid": "learn-bizapps.visuals-in-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.get-data-power-bi-desktop.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-15T19:54:53.3171922Z",
+        "sourceUid": "learn-bizapps.get-data-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.get-started-using-power-bi.trophy",
+        "awardType": "Trophy",
+        "reason": "trophy.path.basic.completed",
+        "awardedDateUTC": "2021-11-12T13:48:51.3182634Z",
+        "sourceUid": "learn-bizapps.get-started-using-power-bi",
+        "sourceType": "LearningPath"
+      },
+      {
+        "awardUid": "learn-bizapps.analyze-explore-data-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-12T13:48:51.3182615Z",
+        "sourceUid": "learn-bizapps.analyze-explore-data-power-bi",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.intro-to-power-bi-service.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-12T12:51:14.984534Z",
+        "sourceUid": "learn-bizapps.intro-to-power-bi-service",
+        "sourceType": "Module"
+      },
+      {
+        "awardUid": "learn-bizapps.wwl.introduction-power-bi.badge",
+        "awardType": "Badge",
+        "reason": "badge.module.basic.completed",
+        "awardedDateUTC": "2021-11-09T19:42:16.1150052Z",
+        "sourceUid": "learn-bizapps.wwl.introduction-power-bi",
+        "sourceType": "Module"
+      }
+    ]
+  },
+  "NextSteps": {
+    "docsId": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+    "dismissals": [],
+    "enrollments": [
+      {
+        "id": "e9a50ad9-6208-49fd-bbb1-f881a437425d",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.get-started-using-power-bi",
+        "_ts": 1636721163
+      },
+      {
+        "id": "1a500c40-c822-4d6e-a841-973fbdc0e2bb",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.create-use-analytics-reports-power-bi",
+        "_ts": 1637006855
+      },
+      {
+        "id": "6eb3deed-5ea9-422f-aead-12cea05a6464",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.power-bi-effective",
+        "_ts": 1637066732
+      },
+      {
+        "id": "7548ac8a-d80c-4443-8fa9-e07460b7420a",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.use-dax-power-bi-desktop",
+        "_ts": 1637067578
+      },
+      {
+        "id": "cd9e65e0-4964-438d-90ee-ead4467418e7",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.manage-workspaces-datasets-power-bi",
+        "_ts": 1637116901
+      },
+      {
+        "id": "e656f71d-f4e1-4e98-b265-a347223ba8f2",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.data-preparation-in-power-bi",
+        "_ts": 1637118105
+      },
+      {
+        "id": "3c4368bf-12f8-45bd-b45a-7a7db2bd076b",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.administer-power-bi-part-1",
+        "_ts": 1637189799
+      },
+      {
+        "id": "337b9629-3bd1-4e0d-aa2d-1d0f51ae7989",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.visual-data-power-bi",
+        "_ts": 1637237551
+      },
+      {
+        "id": "5525c512-e698-42d0-9430-bf52b05e4449",
+        "partitionKey": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "sourceType": "learningpath",
+        "sourceId": "learn-bizapps.data-analysis-power-bi",
+        "_ts": 1637239170
+      }
+    ]
+  },
+  "Assessments": null,
+  "TechProfile": {
+    "email": "johnson.se@pg.com",
+    "locale": "en-us",
+    "country": "US",
+    "contactPointTopicSetting": "OptInImplicit",
+    "gsi": null,
+    "isAvatarTakenDown": null,
+    "isInstructor": false,
+    "source": "docs",
+    "acceptedPrivacyNotice": null,
+    "authenticationModes": [
+      {
+        "id": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "type": "AAD",
+        "tenantId": "3596192b-fdf5-4e2c-a6fa-acb706c963d8",
+        "upn": "johnson.se@pg.com",
+        "oid": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+        "dateAcceptedPrivacyNotice": "2020-03-23T10:48:05.5890108+00:00",
+        "dateAdded": "2019-09-10T01:00:31.5219322+00:00"
+      },
+      {
+        "id": "00060000ABB6C37C",
+        "type": "MSA",
+        "tenantId": "9188040d-6c67-4c5b-b112-36a304b66dad",
+        "upn": "scotteverettjohnson@hotmail.com",
+        "oid": "00000000-0000-0000-a7ba-831bf4befdc5",
+        "dateAcceptedPrivacyNotice": "2021-11-05T20:17:21.2500038+00:00",
+        "dateAdded": "2021-11-05T20:17:21.250004+00:00"
+      }
+    ],
+    "interests": null,
+    "groups": null,
+    "transcriptSettings": {
+      "publicLink": {
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      },
+      "print": {
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      }
+    },
+    "userId": "33f1506f-f687-469f-9f60-0b31ed65c39c",
+    "userName": "JohnsonScott-9582",
+    "displayName": "Scott Johnson",
+    "avatarUrl": "https://techprofile.blob.core.windows.net/images/b1DxM4f2n0afYAsx7WXDnA.png?8D9D1E",
+    "avatarThumbnailUrl": "https://techprofile.blob.core.windows.net/thumbnails/thumb_b1DxM4f2n0afYAsx7WXDnA.png?8D9D1E",
+    "isPrivate": false,
+    "isMicrosoftUser": false,
+    "isMvp": false,
+    "qnaUserId": "1630700",
+    "followerCount": 0,
+    "followingCount": 0,
+    "answersAccepted": 0,
+    "reputationPoints": 1,
+    "createdOn": "2019-09-10T01:00:31.5219271+00:00"
+  },
+  "Q&A": []
+}

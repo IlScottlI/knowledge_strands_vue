@@ -12,7 +12,7 @@
       :class="scrollbarTheme + ' overflow-auto'"
     >
       <v-container v-if="path" class="d-flex justify-center">
-        <v-sheet width="calc(80vw)">
+        <v-sheet width="900">
           <v-row class="pa-10" justify="center">
             <v-col cols="12" sm="2">
               <div v-html="path.icon" />
@@ -33,8 +33,8 @@
                     <v-icon>mdi-circle-small</v-icon>
                   </template>
                 </v-breadcrumbs>
-                <small>{{ path.learning_objectives }}</small>
               </v-row>
+              <small>{{ path.learning_objectives }}</small>
             </v-col>
             <v-col cols="12" sm="8">
               <h3>Prerequisites</h3>
@@ -43,7 +43,7 @@
             <v-col cols="12" sm="8" v-if="learnPathModulesItems">
               <v-btn
                 color="primary"
-                :to="'/module/' + learnPathModulesItems[0].id"
+                :to="'/module?id=' + learnPathModulesItems[0].id"
               >
                 Start <v-icon>mdi-chevron-right</v-icon></v-btn
               >
@@ -70,7 +70,7 @@
             </v-col>
             <v-col cols="12" sm="10">
               <router-link
-                :to="`/module/${item.id}`"
+                :to="`/module?id=${item.id}`"
                 style="text-decoration: none"
               >
                 {{ item.Title }}
@@ -139,7 +139,7 @@ export default {
           href: "",
         },
         {
-          text: count + (count > 1 ? " " + subType + "s" : subType),
+          text: count + (count > 1 ? " " + subType + "s" : " " + subType),
           disabled: true,
           href: "",
         },
@@ -148,7 +148,7 @@ export default {
   },
   created: function () {
     this.$store.commit("setLearnPathId", null);
-    this.$store.commit("setLearnPathId", this.$route.params.id);
+    this.$store.commit("setLearnPathId", this.$route.query.id);
     this.$store.commit("setLearnModuleId", null);
     this.$store.commit("setLearnUnitId", null);
   },

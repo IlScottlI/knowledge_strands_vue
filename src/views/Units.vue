@@ -37,10 +37,18 @@
                 <div style="width: 150px">
                   <router-link
                     v-if="showNext"
+                    @click="checkProgress(learnUnit.id)"
                     :to="nextButton(learnModulesUnitItems)"
                     style="text-decoration: none"
                   >
-                    <v-btn small top right text @click="handleChange">
+                    <v-btn
+                      small
+                      top
+                      right
+                      text
+                      @click="checkProgress(learnUnit.id)"
+                      v-if="learnKnowledgeCheckPass"
+                    >
                       Next
                       <v-icon>mdi-chevron-right</v-icon>
                     </v-btn>
@@ -60,18 +68,20 @@
               </v-row>
             </v-col>
             <v-col cols="12" sm="11">
-              <small>{{
-                (learnUnit.durationInMinutes * 60000) | duration("humanize")
-              }}</small>
+              <small
+                >{{
+                  (learnUnit.durationInMinutes * 60000) | duration("humanize")
+                }}
+              </small>
             </v-col>
             <v-col cols="12" sm="11">
               <div v-html="learnUnit.HTML" v-if="learnUnit.HTML"></div>
             </v-col>
             <v-col cols="12" sm="11">
               <div v-if="learnUnit.Markdown">
-                <vue-markdown v-highlight>{{
-                  learnUnit.Markdown
-                }}</vue-markdown>
+                <vue-markdown v-highlight
+                  >{{ learnUnit.Markdown }}
+                </vue-markdown>
               </div>
             </v-col>
             <v-col cols="12" sm="11" v-if="learnUnit.tip">
@@ -105,33 +115,89 @@
                   v-if="learnUnit.knowledgeCheck"
                   :check="value"
                   :number="key + 1"
+                  :i="Number(key)"
                 />
               </div>
             </v-col>
-            <v-col cols="12" sm="11" v-if="learnKnowledgeCheck">
+            <v-col
+              cols="12"
+              sm="11"
+              v-if="learnKnowledgeCheck && checkAnswersBtn"
+            >
               <div>
                 <v-btn color="primary" @click="checkKnowledge">
                   Check your answers</v-btn
                 >
               </div>
             </v-col>
+            <v-col cols="12" sm="11" v-if="learnKnowledgeCheck">
+              <v-alert v-if="btnMessage" dense outlined :type="btnMessageType">
+                {{ btnMessage }}
+              </v-alert>
+            </v-col>
             <v-col cols="12" sm="11">
               <v-divider></v-divider>
             </v-col>
             <v-col cols="12" sm="11" v-if="nextUnit(learnModulesUnitItems)">
-              <div class="text-h6">
+              <div class="text-h6" v-if="learnKnowledgeCheckPass">
                 Next unit: {{ nextUnit(learnModulesUnitItems).Title }}
               </div>
             </v-col>
-            <v-col cols="12" sm="11" v-if="learnModulesUnitItems">
+            <v-col
+              cols="12"
+              sm="11"
+              v-if="learnModulesUnitItems && learnKnowledgeCheckPass"
+            >
               <div v-if="nextButton(learnModulesUnitItems)">
                 <v-btn
                   color="primary"
                   :to="nextButton(learnModulesUnitItems)"
+                  @click="checkProgress(learnUnit.id)"
+                >
+                  Continue
+                  <v-icon>mdi-chevron-right</v-icon>
+                </v-btn>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="showIncomplete()">
+              <div class="text-h6">Module incomplete:</div>
+            </v-col>
+            <v-col
+              cols="12"
+              sm="11"
+              v-if="!nextButton(learnModulesUnitItems) && !showIncomplete()"
+            >
+              <div class="text-h6">Module complete:</div>
+            </v-col>
+            <v-col cols="12" sm="11" v-if="showIncomplete()">
+              <div>
+                <v-btn
+                  color="primary"
+                  :to="backToFinish(learnModulesUnitItems)"
                   @click="handleChange"
                 >
-                  Continue <v-icon>mdi-chevron-right</v-icon></v-btn
+                  Go back to finish
+                  <v-icon>mdi-chevron-left</v-icon>
+                </v-btn>
+              </div>
+            </v-col>
+            <v-col
+              cols="12"
+              sm="11"
+              v-if="!nextButton(learnModulesUnitItems) && !showIncomplete()"
+            >
+              <div v-if="$store.getters.moduleIncomplete">
+                <v-btn color="primary" @click="unlockAchievement()">
+                  Unlock achievement
+                </v-btn>
+              </div>
+              <div v-else>
+                <v-btn
+                  color="primary"
+                  @click="$router.push({ name: 'Browse' })"
                 >
+                  Review your Learning Path history
+                </v-btn>
               </div>
             </v-col>
           </v-row>
@@ -145,6 +211,7 @@
 import UnitMenu from "../components/UnitMenu.vue";
 import KnowledgeCheck from "../components/KnowledgeCheck.vue";
 import { mapActions } from "vuex";
+import Swal from "sweetalert2";
 
 export default {
   components: {
@@ -153,14 +220,47 @@ export default {
   },
   data: () => ({
     text: "# hello world",
+    checkAnswersBtn: false,
   }),
   computed: {
+    learnKnowledgeCheckResponse: {
+      get() {
+        return this.$store.state.learnKnowledgeCheckResponse;
+      },
+      set(value) {
+        this.$store.commit("setLearnKnowledgeCheckResponse", value);
+      },
+    },
+    handleKnowledgeCheck: {
+      get() {
+        return this.$store.state.handleKnowledgeCheck;
+      },
+      set(value) {
+        this.$store.commit("setHandleKnowledgeCheck", value);
+      },
+    },
     learnUnitIndex: {
       get() {
         return this.$store.state.learnUnitIndex;
       },
       set(value) {
         this.$store.commit("setLearnUnitIndex", value);
+      },
+    },
+    btnMessage: {
+      get() {
+        return this.$store.state.btnMessage;
+      },
+      set(value) {
+        this.$store.commit("setBtnMessage", value);
+      },
+    },
+    btnMessageType: {
+      get() {
+        return this.$store.state.btnMessageType;
+      },
+      set(value) {
+        this.$store.commit("setBtnMessageType", value);
       },
     },
     learnUnitItemsCount: {
@@ -171,6 +271,37 @@ export default {
         this.$store.commit("setLearnUnitItemsCount", value);
       },
     },
+    learnUnitItemsCompleteCount: {
+      get() {
+        return this.$store.state.learnUnitItemsCompleteCount;
+      },
+      set(value) {
+        this.$store.commit("setLearnUnitItemsCompleteCount", value);
+      },
+    },
+    learnKnowledgeCheckPass: {
+      get() {
+        return this.$store.state.learnKnowledgeCheckPass;
+      },
+      set(value) {
+        this.$store.commit("setLearnKnowledgeCheckPass", value);
+      },
+    },
+    historyJson: {
+      get() {
+        return this.$store.getters.historyJson;
+      },
+    },
+    complete_units: {
+      get() {
+        return this.$store.getters.complete_units;
+      },
+    },
+    progress() {
+      return this.$store.getters.complete_units.find(
+        (e) => Number(e.u) === Number(this.$route.query.id)
+      );
+    },
     scrollbarTheme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
@@ -179,6 +310,12 @@ export default {
     },
     learnModule: function () {
       return this.$store.getters.learnModule;
+    },
+    learnModuleComplete: function () {
+      if (!this.$store.state.learnModuleId) return;
+      return this.$store.getters.complete_units
+        .map((e) => e.m)
+        .includes(this.$store.state.learnModuleId);
     },
     learnModuleId: function () {
       return this.$store.state.learnModuleId;
@@ -217,23 +354,121 @@ export default {
   },
   methods: {
     ...mapActions(["handleChange", "checkKnowledge"]),
+    unlockAchievement() {
+      let item = this.$route.query.id;
+      if (this.complete_units) {
+        if (
+          this.complete_units.filter((e) => {
+            return e.u == item;
+          }).length
+        ) {
+          console.log("Progress already tracked");
+        } else {
+          let history_json = this.historyJson;
+          history_json.progress.complete_units.push({
+            u: Number(item),
+            t: Date.now(),
+          });
+          history_json.progress.complete_modules.push({
+            m: Number(this.learnModuleId),
+            t: Date.now(),
+          });
+          this.$store.dispatch("patchUserProfile", {
+            fields: { history_json: JSON.stringify(history_json) },
+          });
+        }
+      }
+      Swal.fire({
+        title: "You did it!",
+        html: "<div> Congratulations! Keep it up. Browse to learn more about your interests. </div>",
+        imageUrl: "https://unsplash.it/400/200",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+        icon: "success",
+        confirmButtonText: "Back to Browse",
+      });
+    },
+    showIncomplete() {
+      let learnUnitIndex = this.$store.state.learnUnitIndex;
+      let learnUnitItemsCount = this.$store.state.learnUnitItemsCount;
+      if (!this.$store.getters.learnModule) return;
+      if (!this.$store.getters.complete_units) return;
+      let here = [];
+      let notHere = [];
+      this.$store.getters.learnModule.childern.split(",").forEach((e) => {
+        if (
+          this.$store.getters.complete_units.map((i) => i.u).includes(Number(e))
+        ) {
+          here.push(e);
+        } else {
+          notHere.push(e);
+        }
+      });
+      if (
+        here.length ===
+        this.$store.getters.learnModule.childern.split(",").length
+      )
+        return false;
+      return (
+        learnUnitIndex + notHere.length !== learnUnitItemsCount &&
+        learnUnitIndex === learnUnitItemsCount - 1
+      );
+    },
+    backToFinish: function () {
+      if (!this.$store.getters.learnModule) return;
+      if (!this.$store.getters.complete_units) return;
+      let here = [];
+      let notHere = [];
+      this.$store.getters.learnModule.childern.split(",").forEach((e) => {
+        if (
+          this.$store.getters.complete_units.map((i) => i.u).includes(Number(e))
+        ) {
+          here.push(e);
+        } else {
+          notHere.push(e);
+        }
+      });
+      return "/unit?id=" + notHere[0];
+    },
+    checkProgress(item) {
+      if (this.complete_units) {
+        if (
+          this.complete_units.filter((e) => {
+            return e.u === Number(item);
+          }).length
+        ) {
+          console.log("Progress already tracked");
+        } else {
+          let history_json = this.historyJson;
+          history_json.progress.complete_units.push({
+            u: Number(item),
+            t: Date.now(),
+          });
+          this.$store.dispatch("patchUserProfile", {
+            fields: { history_json: JSON.stringify(history_json) },
+          });
+        }
+      }
+      this.handleChange();
+    },
     nextUnit: function (learnModulesUnitItems) {
       let nextIndex = this.learnUnitIndex + 1;
       return learnModulesUnitItems[nextIndex]
         ? learnModulesUnitItems[nextIndex]
-        : {};
+        : false;
     },
     nextButton: function (learnModulesUnitItems) {
       let nextIndex = this.learnUnitIndex + 1;
       return learnModulesUnitItems[nextIndex]
-        ? "/unit/" + learnModulesUnitItems[nextIndex].id
+        ? "/unit?id=" + learnModulesUnitItems[nextIndex].id
         : "";
     },
     previousButton: function (learnModulesUnitItems) {
       let previousIndex = this.learnUnitIndex - 1;
       if (previousIndex < 0) return "";
       return learnModulesUnitItems[previousIndex]
-        ? "/unit/" + learnModulesUnitItems[previousIndex].id
+        ? "/unit?id=" + learnModulesUnitItems[previousIndex].id
         : "";
     },
     getCrumbs: function (duration, type, childern) {
@@ -273,15 +508,19 @@ export default {
   },
   created: function () {
     this.$store.dispatch("getLearnUnitItems");
-    this.$store.commit("setLearnUnitId", String(this.$route.params.id));
+    this.$store.commit("setLearnUnitId", String(this.$route.query.id));
     this.$store.commit("setLearnModuleId", null);
     this.$store.commit("setLearnPathId", null);
+    this.$store.commit("setBtnMessage", null);
+    this.$store.commit("setBtnMessageType", null);
+    this.learnKnowledgeCheckResponse = [];
   },
   mounted() {
     this.$store.dispatch("getLearnItems");
     this.$store.dispatch("getProductItems");
     this.$store.dispatch("getRoleItems");
     this.$store.dispatch("getLearnKnowledgeChecks");
+    this.$store.dispatch("getUserProfile");
   },
   watch: {
     learnModulesUnitItems(learnModulesUnitItems) {
@@ -295,8 +534,95 @@ export default {
       this.$store.commit("setLearnPathId", String(item.pathId));
     },
     learnUnit(item) {
-      if (!item) return;
+      if (typeof item !== "object") return;
       this.$store.commit("setLearnModuleId", String(item.parentId));
+      this.checkAnswersBtn = true;
+      if (this.learnUnit.knowledgeCheck) {
+        if (this.progress) {
+          this.$store.commit("setLearnKnowledgeCheckPass", true);
+        } else {
+          this.$store.commit("setLearnKnowledgeCheckPass", false);
+        }
+      } else {
+        this.$store.commit("setLearnKnowledgeCheckPass", true);
+      }
+      this.$store.dispatch("patchUserProfile", {
+        fields: {
+          current_json: JSON.stringify({
+            module: Number(item.parentId),
+            unit: Number(item.id),
+          }),
+        },
+      });
+    },
+    handleKnowledgeCheck() {
+      if (!this.learnKnowledgeCheck) return;
+      if (!this.learnKnowledgeCheckResponse) return;
+      if (
+        this.learnKnowledgeCheckResponse.length !==
+        this.learnKnowledgeCheck.length
+      ) {
+        this.btnMessage =
+          "You must answer all questions before checking your work.";
+        this.btnMessageType = "error";
+        return;
+      }
+      let total = this.learnKnowledgeCheckResponse.length;
+      let correct = 0;
+      this.learnKnowledgeCheckResponse.forEach((e) => {
+        if (e.sa === e.ca) {
+          correct++;
+        }
+      });
+      if (total === correct) {
+        this.learnKnowledgeCheckPass = true;
+        this.checkAnswersBtn = false;
+        Swal.fire({
+          title: "Congratulations!",
+          html: "Knowledge check complete. <br>You answered all questions correctly.",
+          icon: "success",
+          confirmButtonText: "Sweet",
+        });
+        let item = this.learnUnit.id;
+        if (this.complete_units) {
+          if (
+            this.complete_units.filter((e) => {
+              return e.u === Number(item);
+            }).length
+          ) {
+            console.log("Progress already tracked");
+          } else {
+            let history_json = this.historyJson;
+            history_json.progress.complete_units.push({
+              u: Number(item),
+              t: Date.now(),
+              kc: this.learnKnowledgeCheckResponse,
+            });
+            history_json.progress.knowledge_checks.push({
+              u: Number(item),
+              t: Date.now(),
+              kc: this.learnKnowledgeCheckResponse,
+            });
+            this.$store.dispatch("patchUserProfile", {
+              fields: { history_json: JSON.stringify(history_json) },
+            });
+          }
+        }
+      } else {
+        console.log(this.learnKnowledgeCheckResponse);
+        let item = this.learnUnit.id;
+        this.btnMessage = "Some of the responses are incorrect";
+        this.btnMessageType = "warning";
+        let history_json = this.historyJson;
+        history_json.progress.knowledge_checks.push({
+          u: Number(item),
+          t: Date.now(),
+          kc: this.learnKnowledgeCheckResponse,
+        });
+        this.$store.dispatch("patchUserProfile", {
+          fields: { history_json: JSON.stringify(history_json) },
+        });
+      }
     },
   },
 };
